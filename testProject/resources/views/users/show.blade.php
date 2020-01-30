@@ -1,9 +1,4 @@
 @extends('layouts.default')
-@section('css')
-
-    <link rel="stylesheet" media="screen, print" href="{{asset('theme')}}/css/fa-solid.css">
-    <link rel="stylesheet" media="screen, print" href="{{asset('theme')}}/css/fa-brands.css">
-@endsection
 
 @section('contenu')
     <main id="js-page-content" role="main" class="page-content">
@@ -77,139 +72,6 @@
 
                     </div>
                 </div>
-                <!-- photos -->
-                <div class="card mb-g">
-                    <div class="row row-grid no-gutters">
-                        <div class="col-12">
-                            <div class="p-3">
-                                <h2 class="mb-0 fs-xl">
-                                    Photos
-                                </h2>
-                            </div>
-                        </div>
-                        <div class="col-4">
-                            <a href="javascript:void(0);" class="text-center px-3 py-4 d-flex position-relative height-10 border">
-                                <span class="position-absolute pos-top pos-left pos-right pos-bottom" style="background-image: url('img/demo/gallery/thumb/1.jpg');background-size: cover;"></span>
-                            </a>
-                        </div>
-                        <div class="col-4">
-                            <a href="javascript:void(0);" class="text-center px-3 py-4 d-flex position-relative height-10 border">
-                                <span class="position-absolute pos-top pos-left pos-right pos-bottom" style="background-image: url('img/demo/gallery/thumb/2.jpg');background-size: cover;"></span>
-                            </a>
-                        </div>
-                        <div class="col-4">
-                            <a href="javascript:void(0);" class="text-center px-3 py-4 d-flex position-relative height-10 border">
-                                <span class="position-absolute pos-top pos-left pos-right pos-bottom" style="background-image: url('img/demo/gallery/thumb/3.jpg');background-size: cover;"></span>
-                            </a>
-                        </div>
-                        <div class="col-4">
-                            <a href="javascript:void(0);" class="text-center px-3 py-4 d-flex position-relative height-10 border">
-                                <span class="position-absolute pos-top pos-left pos-right pos-bottom" style="background-image: url('img/demo/gallery/thumb/4.jpg');background-size: cover;"></span>
-                            </a>
-                        </div>
-                        <div class="col-4">
-                            <a href="javascript:void(0);" class="text-center px-3 py-4 d-flex position-relative height-10 border">
-                                <span class="position-absolute pos-top pos-left pos-right pos-bottom" style="background-image: url('img/demo/gallery/thumb/5.jpg');background-size: cover;"></span>
-                            </a>
-                        </div>
-                        <div class="col-4">
-                            <a href="javascript:void(0);" class="text-center px-3 py-4 d-flex position-relative height-10 border">
-                                <span class="position-absolute pos-top pos-left pos-right pos-bottom" style="background-image: url('img/demo/gallery/thumb/6.jpg');background-size: cover;"></span>
-                            </a>
-                        </div>
-                        <div class="col-4">
-                            <a href="javascript:void(0);" class="text-center px-3 py-4 d-flex position-relative height-10 border">
-                                <span class="position-absolute pos-top pos-left pos-right pos-bottom" style="background-image: url('img/demo/gallery/thumb/7.jpg');background-size: cover;"></span>
-                            </a>
-                        </div>
-                        <div class="col-4">
-                            <a href="javascript:void(0);" class="text-center px-3 py-4 d-flex position-relative height-10 border">
-                                <span class="position-absolute pos-top pos-left pos-right pos-bottom" style="background-image: url('img/demo/gallery/thumb/8.jpg');background-size: cover;"></span>
-                            </a>
-                        </div>
-                        <div class="col-4">
-                            <a href="javascript:void(0);" class="text-center px-3 py-4 d-flex position-relative height-10 border">
-                                <span class="position-absolute pos-top pos-left pos-right pos-bottom" style="background-image: url('img/demo/gallery/thumb/9.jpg');background-size: cover;"></span>
-                            </a>
-                        </div>
-                        <div class="col-12">
-                            <div class="p-3 text-center">
-                                <a href="javascript:void(0);" class="btn-link font-weight-bold">View all</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- contacts -->
-                <div class="card mb-g">
-                    <div class="row row-grid no-gutters">
-                        <div class="col-12">
-                            <div class="p-3">
-                                <h2 class="mb-0 fs-xl">
-                                    Contacts
-                                </h2>
-                            </div>
-                        </div>
-                        <div class="col-4">
-                            <a href="javascript:void(0);" class="text-center p-3 d-flex flex-column hover-highlight">
-                                <span class="profile-image rounded-circle d-block m-auto" style="background-image:url('img/demo/avatars/avatar-b.png'); background-size: cover;"></span>
-                                <span class="d-block text-truncate text-muted fs-xs mt-1">Oliver Kopyov</span>
-                            </a>
-                        </div>
-                        <div class="col-4">
-                            <a href="javascript:void(0);" class="text-center p-3 d-flex flex-column hover-highlight">
-                                <span class="profile-image rounded-circle d-block m-auto" style="background-image:url('img/demo/avatars/avatar-c.png'); background-size: cover;"></span>
-                                <span class="d-block text-truncate text-muted fs-xs mt-1">Sesha Gray</span>
-                            </a>
-                        </div>
-                        <div class="col-4">
-                            <a href="javascript:void(0);" class="text-center p-3 d-flex flex-column hover-highlight">
-                                <span class="profile-image rounded-circle d-block m-auto" style="background-image:url('img/demo/avatars/avatar-a.png'); background-size: cover;"></span>
-                                <span class="d-block text-truncate text-muted fs-xs mt-1">Preny Amdaney</span>
-                            </a>
-                        </div>
-                        <div class="col-4">
-                            <a href="javascript:void(0);" class="text-center p-3 d-flex flex-column hover-highlight">
-                                <span class="profile-image rounded-circle d-block m-auto" style="background-image:url('img/demo/avatars/avatar-e.png'); background-size: cover;"></span>
-                                <span class="d-block text-truncate text-muted fs-xs mt-1">Dr. John Cook PhD</span>
-                            </a>
-                        </div>
-                        <div class="col-4">
-                            <a href="javascript:void(0);" class="text-center p-3 d-flex flex-column hover-highlight">
-                                <span class="profile-image rounded-circle d-block m-auto" style="background-image:url('img/demo/avatars/avatar-h.png'); background-size: cover;"></span>
-                                <span class="d-block text-truncate text-muted fs-xs mt-1">Sarah McBrook</span>
-                            </a>
-                        </div>
-                        <div class="col-4">
-                            <a href="javascript:void(0);" class="text-center p-3 d-flex flex-column hover-highlight">
-                                <span class="profile-image rounded-circle d-block m-auto" style="background-image:url('img/demo/avatars/avatar-i.png'); background-size: cover;"></span>
-                                <span class="d-block text-truncate text-muted fs-xs mt-1">Jimmy Fellan</span>
-                            </a>
-                        </div>
-                        <div class="col-4">
-                            <a href="javascript:void(0);" class="text-center p-3 d-flex flex-column hover-highlight">
-                                <span class="profile-image rounded-circle d-block m-auto" style="background-image:url('img/demo/avatars/avatar-j.png'); background-size: cover;"></span>
-                                <span class="d-block text-truncate text-muted fs-xs mt-1">Arica Grace</span>
-                            </a>
-                        </div>
-                        <div class="col-4">
-                            <a href="javascript:void(0);" class="text-center p-3 d-flex flex-column hover-highlight">
-                                <span class="profile-image rounded-circle d-block m-auto" style="background-image:url('img/demo/avatars/avatar-k.png'); background-size: cover;"></span>
-                                <span class="d-block text-truncate text-muted fs-xs mt-1">Jim Ketty</span>
-                            </a>
-                        </div>
-                        <div class="col-4">
-                            <a href="javascript:void(0);" class="text-center p-3 d-flex flex-column hover-highlight">
-                                <span class="profile-image rounded-circle d-block m-auto" style="background-image:url('img/demo/avatars/avatar-g.png'); background-size: cover;"></span>
-                                <span class="d-block text-truncate text-muted fs-xs mt-1">Ali Grey</span>
-                            </a>
-                        </div>
-                        <div class="col-12">
-                            <div class="p-3 text-center">
-                                <a href="javascript:void(0);" class="btn-link font-weight-bold">View all</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
             <div class="col-lg-12 col-xl-6 order-lg-3 order-xl-2">
                 <div class="card border mb-g">
@@ -239,217 +101,92 @@
                     </div>
                 </div>
                 <!-- post comment -->
-                <div class="card mb-g">
-                    <div class="card-body pb-0 px-4">
-                        <div class="d-flex flex-row pb-3 pt-2  border-top-0 border-left-0 border-right-0">
-                            <div class="d-inline-block align-middle status status-success mr-3">
-                                <span class="profile-image rounded-circle d-block" style="background-image:url('img/demo/avatars/avatar-e.png'); background-size: cover;"></span>
-                            </div>
-                            <h5 class="mb-0 flex-1 text-dark fw-500">
-                                Dr. John Cook PhD
-                                <small class="m-0 l-h-n">
-                                    Human Resources & Psychiatry Division
-                                </small>
-                            </h5>
-                            <span class="text-muted fs-xs opacity-70">
-                                                3 hours
-                                            </span>
-                        </div>
-                        <div class="pb-3 pt-2 border-top-0 border-left-0 border-right-0 text-muted">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                        </div>
-                        <div class="d-flex align-items-center demo-h-spacing py-3">
-                            <a href="javascript:void(0);" class="d-inline-flex align-items-center text-dark">
-                                <i class="fas fa-heart fs-xs mr-1 text-danger"></i> <span>2 Likes</span>
-                            </a>
-                            <a href="javascript:void(0);" class="d-inline-flex align-items-center text-dark">
-                                <i class="fal fa-comment fs-xs mr-1"></i> <span>2 Comments</span>
-                            </a>
+                <div id="panel-5" class="panel">
+                    <div class="panel-hdr">
+                        <h2>
+                            Accordion <span class="fw-300"><i>hover</i></span>
+                        </h2>
+                        <div class="panel-toolbar">
+                            <button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-offset="0,10" data-original-title="Collapse"></button>
+                            <button class="btn btn-panel" data-action="panel-fullscreen" data-toggle="tooltip" data-offset="0,10" data-original-title="Fullscreen"></button>
+                            <button class="btn btn-panel" data-action="panel-close" data-toggle="tooltip" data-offset="0,10" data-original-title="Close"></button>
                         </div>
                     </div>
-                    <div class="card-body py-0 px-4 border-faded border-right-0 border-bottom-0 border-left-0">
-                        <div class="d-flex flex-column align-items-center">
-                            <!-- comment -->
-                            <div class="d-flex flex-row w-100 py-4">
-                                <div class="d-inline-block align-middle status status-sm status-success mr-3">
-                                    <span class="profile-image profile-image-md rounded-circle d-block mt-1" style="background-image:url('img/demo/avatars/avatar-c.png'); background-size: cover;"></span>
-                                </div>
-                                <div class="mb-0 flex-1 text-dark">
-                                    <div class="d-flex">
-                                        <a href="javascript:void(0);" class="text-dark fw-500">
-                                            Test name
-                                        </a><span class="text-muted fs-xs opacity-70 ml-auto">
-                                                            15 minutes
-                                                        </span>
-                                    </div>
-                                    <p class="mb-0">
-                                        Excellent work, looking forward to it.
-                                    </p>
-                                </div>
+                    <div class="panel-container show">
+                        <div class="panel-content">
+                            <div class="panel-tag">
+                                Adding a hover effect adds nice element to your accordion. Achieve this by adding class <code>.accordion-hover</code> to <code>.accordion</code>
                             </div>
-                            <hr class="m-0 w-100">
-                            <!-- comment end -->
-                            <!-- comment -->
-                            <div class="d-flex flex-row w-100 py-4">
-                                <div class="d-inline-block align-middle status status-sm status-success mr-3">
-                                    <span class="profile-image profile-image-md rounded-circle d-block mt-1" style="background-image:url('img/demo/avatars/avatar-admin.png'); background-size: cover;"></span>
-                                </div>
-                                <div class="mb-0 flex-1 text-dark">
-                                    <div class="d-flex">
-                                        <a href="javascript:void(0);" class="text-dark fw-500">
-                                            Dr. Codex Lantern
-                                        </a><span class="text-muted fs-xs opacity-70 ml-auto">
-                                                            3 minutes
-                                                        </span>
-                                    </div>
-                                    <p class="mb-0">
-                                        Congrats mate!
-                                    </p>
-                                    <div class="pl-0 d-flex flex-row w-100 pb-0 pt-4">
-                                        <div class="d-inline-block align-middle status status-sm status-success mr-3">
-                                            <span class="profile-image profile-image-md rounded-circle d-block mt-1" style="background-image:url('img/demo/avatars/avatar-e.png'); background-size: cover;"></span>
-                                        </div>
-                                        <div class="mb-0 flex-1 text-dark">
-                                            <div class="d-flex">
-                                                <a href="javascript:void(0);" class="text-dark fw-500">
-                                                    Dr. John Cook PhD
-                                                </a><span class="text-muted fs-xs opacity-70 ml-auto">
-                                                                    30 seconds
+                            <div class="accordion accordion-hover" id="js_demo_accordion-5">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <a href="javascript:void(0);" class="card-title" data-toggle="collapse" data-target="#js_demo_accordion-5a" aria-expanded="true">
+                                            <i class="fal fa-cog width-2 fs-xl"></i>
+                                            Report settings
+                                            <span class="ml-auto">
+                                                                <span class="collapsed-reveal">
+                                                                    <i class="fal fa-chevron-up fs-xl"></i>
                                                                 </span>
-                                            </div>
-                                            <p class="mb-0">
-                                                Thanks!
-                                            </p>
+                                                                <span class="collapsed-hidden">
+                                                                    <i class="fal fa-chevron-down fs-xl"></i>
+                                                                </span>
+                                                            </span>
+                                        </a>
+                                    </div>
+                                    <div id="js_demo_accordion-5a" class="collapse show" data-parent="#js_demo_accordion-5">
+                                        <div class="card-body">
+                                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header">
+                                        <a href="javascript:void(0);" class="card-title collapsed" data-toggle="collapse" data-target="#js_demo_accordion-5b" aria-expanded="false">
+                                            <i class="fal fa-code-merge width-2 fs-xl"></i>
+                                            Merge reports
+                                            <span class="ml-auto">
+                                                                <span class="collapsed-reveal">
+                                                                    <i class="fal fa-chevron-up fs-xl"></i>
+                                                                </span>
+                                                                <span class="collapsed-hidden">
+                                                                    <i class="fal fa-chevron-down fs-xl"></i>
+                                                                </span>
+                                                            </span>
+                                        </a>
+                                    </div>
+                                    <div id="js_demo_accordion-5b" class="collapse" data-parent="#js_demo_accordion-5">
+                                        <div class="card-body">
+                                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header">
+                                        <a href="javascript:void(0);" class="card-title collapsed" data-toggle="collapse" data-target="#js_demo_accordion-5c" aria-expanded="false">
+                                            <i class="fal fa-cloud-upload-alt width-2 fs-xl"></i>
+                                            Backup reports
+                                            <span class="ml-auto">
+                                                                <span class="collapsed-reveal">
+                                                                    <i class="fal fa-chevron-up fs-xl"></i>
+                                                                </span>
+                                                                <span class="collapsed-hidden">
+                                                                    <i class="fal fa-chevron-down fs-xl"></i>
+                                                                </span>
+                                                            </span>
+                                        </a>
+                                    </div>
+                                    <div id="js_demo_accordion-5c" class="collapse" data-parent="#js_demo_accordion-5">
+                                        <div class="card-body">
+                                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <hr class="m-0 w-100">
-                            <!-- comment end -->
-                            <!-- add comment -->
-                            <div class="py-3 w-100">
-                                <textarea class="form-control border-0 p-0" rows="2" placeholder="add a comment..."></textarea>
-                            </div>
-                            <!-- add comment end -->
                         </div>
                     </div>
                 </div>
-                <!-- post comment - end -->
-                <!-- post picture -->
-                <div class="card mb-g">
-                    <div class="card-body pb-0 px-4">
-                        <div class="d-flex flex-row pb-3 pt-2  border-top-0 border-left-0 border-right-0">
-                            <div class="d-inline-block align-middle status status-success mr-3">
-                                <span class="profile-image rounded-circle d-block" style="background-image:url('img/demo/avatars/avatar-admin.png'); background-size: cover;"></span>
-                            </div>
-                            <h5 class="mb-0 flex-1 text-dark fw-500">
-                                Dr. Codex Lantern
-                                <small class="m-0 l-h-n">
-                                    Chief of Surgery
-                                </small>
-                            </h5>
-                            <span class="text-muted fs-xs opacity-70">
-                                                1 day
-                                            </span>
-                        </div>
-                        <div class="pb-3 pt-2 border-top-0 border-left-0 border-right-0 text-muted">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
-                            <img src="img/demo/gallery/46.jpg" class="img-fluid" alt="">
-                        </div>
-                        <div class="d-flex align-items-center demo-h-spacing py-3">
-                            <a href="javascript:void(0);" class="d-inline-flex align-items-center text-dark">
-                                <i class="fal fa-heart fs-xs mr-1"></i> <span>37 Likes</span>
-                            </a>
-                            <a href="javascript:void(0);" class="d-inline-flex align-items-center text-dark">
-                                <i class="fal fa-comment fs-xs mr-1"></i> <span>1 Comment</span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="card-body py-0 px-4 border-faded border-right-0 border-bottom-0 border-left-0">
-                        <div class="d-flex flex-column align-items-center">
-                            <!-- comment -->
-                            <div class="d-flex flex-row w-100 py-4">
-                                <div class="d-inline-block align-middle status status-sm status-success mr-3">
-                                    <span class="profile-image profile-image-md rounded-circle d-block mt-1" style="background-image:url('img/demo/avatars/avatar-h.png'); background-size: cover;"></span>
-                                </div>
-                                <div class="mb-0 flex-1 text-dark">
-                                    <div class="d-flex">
-                                        <a href="javascript:void(0);" class="text-dark fw-500">
-                                            Sarah McBrook
-                                        </a><span class="text-muted fs-xs opacity-70 ml-auto">
-                                                            10 minutes
-                                                        </span>
-                                    </div>
-                                    <p class="mb-0">
-                                        Nice shot! When are you going again?
-                                    </p>
-                                </div>
-                            </div>
-                            <hr class="m-0 w-100">
-                            <!-- comment end -->
-                            <!-- add comment -->
-                            <div class="py-3 w-100">
-                                <textarea class="form-control border-0 p-0" rows="2" placeholder="add a comment..."></textarea>
-                            </div>
-                            <!-- add comment end -->
-                        </div>
-                    </div>
-                </div>
-                <!-- post picture - end -->
                 <!-- post article -->
-                <div class="card mb-g">
-                    <div class="card-body pb-0 px-4">
-                        <div class="d-flex flex-row pb-3 pt-2  border-top-0 border-left-0 border-right-0">
-                            <div class="d-inline-block align-middle status status-success mr-3">
-                                <span class="profile-image rounded-circle d-block" style="background-image:url('img/demo/avatars/avatar-admin.png'); background-size: cover;"></span>
-                            </div>
-                            <h5 class="mb-0 flex-1 text-dark fw-500">
-                                Dr. Codex Lantern
-                                <small class="m-0 l-h-n">
-                                    Chief of Surgery
-                                </small>
-                            </h5>
-                            <span class="text-muted fs-xs opacity-70">
-                                                2 days
-                                            </span>
-                        </div>
-                        <div class="pb-3 pt-2 border-top-0 border-left-0 border-right-0 text-muted">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
-                            <!-- URL post -->
-                            <div class="d-flex overflow-hidden rounded w-100 border">
-                                <div class="row no-gutters">
-                                    <div class="col-2 col-sm-3" style="background-image:url('img/demo/profile/article-healthyfood.png'); background-size: cover;"></div>
-                                    <div class="col">
-                                        <div class="bg-faded flex-1 p-4 h-100">
-                                            <h6 class="text-dark fw-500">
-                                                Healthy food
-                                            </h6>
-                                            <p class="m-0">sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="d-flex align-items-center demo-h-spacing py-3">
-                            <a href="javascript:void(0);" class="d-inline-flex align-items-center text-dark">
-                                <i class="fal fa-heart fs-xs mr-1"></i> <span>1 Likes</span>
-                            </a>
-                            <a href="javascript:void(0);" class="d-inline-flex align-items-center text-dark">
-                                <i class="fal fa-comment fs-xs mr-1"></i> <span>0 Comments</span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="card-body py-0 px-4 border-faded border-right-0 border-bottom-0 border-left-0">
-                        <div class="d-flex flex-column align-items-center">
-                            <!-- add comment -->
-                            <div class="py-3 w-100">
-                                <textarea class="form-control border-0 p-0" rows="2" placeholder="add a comment..."></textarea>
-                            </div>
-                            <!-- add comment end -->
-                        </div>
-                    </div>
-                </div>
+
                 <!-- post article - end -->
             </div>
             <div class="col-lg-6 col-xl-3 order-lg-2 order-xl-3">
@@ -488,73 +225,7 @@
                         </a>
                     </div>
                 </div>
-                <!-- rating -->
-                <div class="card mb-g">
-                    <div class="row row-grid no-gutters">
-                        <div class="col-12">
-                            <div class="p-3">
-                                <h2 class="mb-0 fs-xl">
-                                    Dr. Codex Lantern's Rating
-                                </h2>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="p-3 d-flex text-primary align-items-center fs-xl">
-                                <i class="fas fa-star mr-1"></i>
-                                <i class="fas fa-star mr-1"></i>
-                                <i class="fas fa-star mr-1"></i>
-                                <i class="fas fa-star mr-1"></i>
-                                <i class="fal fa-star mr-1"></i>
-                                <span class="ml-auto">4/5 Stars</span>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="p-3">
-                                <div class="fw-500 fs-xs">Staff</div>
-                                <div class="progress progress-xs mt-2">
-                                    <div class="progress-bar bg-primary-300 bg-primary-gradient" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="p-3">
-                                <div class="fw-500 fs-xs">Punctuality</div>
-                                <div class="progress progress-xs mt-2">
-                                    <div class="progress-bar bg-primary-300 bg-primary-gradient" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="p-3">
-                                <div class="fw-500 fs-xs">Helpfulness</div>
-                                <div class="progress progress-xs mt-2">
-                                    <div class="progress-bar bg-primary-300 bg-primary-gradient" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="p-3">
-                                <div class="fw-500 fs-xs">Knowledge</div>
-                                <div class="progress progress-xs mt-2">
-                                    <div class="progress-bar bg-primary-300 bg-primary-gradient" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="p-3">
-                                <div class="fw-500 fs-xs">Bedside manners</div>
-                                <div class="progress progress-xs mt-2">
-                                    <div class="progress-bar bg-danger-300 bg-warning-gradient" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="p-3 text-center">
-                                <a href="javascript:void(0);" class="btn-link font-weight-bold">View all</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
                 <!-- skills -->
                 <div class="card mb-g">
                     <div class="row row-grid no-gutters">
@@ -635,26 +306,26 @@
                                     <div class="text-secondary mb-1">Project Owners</div>
                                     <div class="fs-sm d-flex align-items-center">
                                         <a href="#" class="btn-m-s">
-                                            <img src="img/demo/avatars/avatar-a.png" class="profile-image-sm rounded-circle" alt="aa">
+                                            <img src="{{asset("theme")}}/img/demo/avatars/avatar-a.png" class="profile-image-sm rounded-circle" alt="aa">
                                         </a>
                                         <a href="#" class="btn-m-s">
-                                            <img src="img/demo/avatars/avatar-b.png" class="profile-image-sm rounded-circle" alt="aa">
+                                            <img src="{{asset("theme")}}/img/demo/avatars/avatar-b.png" class="profile-image-sm rounded-circle" alt="aa">
                                         </a>
                                         <a href="#" class="btn-m-s">
-                                            <img src="img/demo/avatars/avatar-c.png" class="profile-image-sm rounded-circle" alt="aa">
+                                            <img src="{{asset("theme")}}/img/demo/avatars/avatar-c.png" class="profile-image-sm rounded-circle" alt="aa">
                                         </a>
                                         <a href="#" class="btn-m-s">
-                                            <img src="img/demo/avatars/avatar-e.png" class="profile-image-sm rounded-circle" alt="aa">
+                                            <img src="{{asset("theme")}}/img/demo/avatars/avatar-e.png" class="profile-image-sm rounded-circle" alt="aa">
                                         </a>
                                         <a href="#" class="btn-m-s">
-                                            <img src="img/demo/avatars/avatar-h.png" class="profile-image-sm rounded-circle" alt="aa">
+                                            <img src="{{asset("theme")}}/img/demo/avatars/avatar-h.png" class="profile-image-sm rounded-circle" alt="aa">
                                         </a>
                                         <a href="#" class="btn-m-s">
-                                            <img src="img/demo/avatars/avatar-k.png" class="profile-image-sm rounded-circle" alt="aa">
+                                            <img src="{{asset("theme")}}/img/demo/avatars/avatar-k.png" class="profile-image-sm rounded-circle" alt="aa">
                                         </a>
                                         <a href="#" class="btn-m-s fs-xs">
                                                             <span data-hasmore="+7" class="rounded-circle profile-image-sm">
-                                                                <img src="img/demo/avatars/avatar-j.png" class="profile-image-sm rounded-circle" alt="aa">
+                                                                <img src="{{asset("theme")}}/img/demo/avatars/avatar-j.png" class="profile-image-sm rounded-circle" alt="aa">
                                                             </span>
                                         </a>
                                     </div>
@@ -666,14 +337,4 @@
             </div>
         </div>
     </main>
-@endsection
-
-@section('script')
-
-    <script src="{{asset('theme')}}/js/vendors.bundle.js"></script>
-    <script src="{{asset('theme')}}/js/app.bundle.js"></script>
-
-    <script>
-
-    </script>
 @endsection
