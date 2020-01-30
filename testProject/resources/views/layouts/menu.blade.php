@@ -20,9 +20,7 @@
         <img src="{{asset('theme')}}/img/demo/avatars/avatar-m.png" class="profile-image rounded-circle" alt="Dr. Codex Lantern">
         <div class="info-card-text">
             <a href="#" class="d-flex align-items-center text-white">
-                                    <span class="text-truncate text-truncate-sm d-inline-block">
-                                        Dr. Codex Lantern
-                                    </span>
+                <span class="text-truncate text-truncate-md opacity-80">{{ Auth::user()->first_name .' '. Auth::user()->last_name }}</span>
             </a>
             <span class="d-inline-block text-truncate text-truncate-sm">Cameroon</span>
         </div>

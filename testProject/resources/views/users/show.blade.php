@@ -25,7 +25,7 @@
                             <div class="d-flex flex-column align-items-center justify-content-center p-4">
                                 <img src="{{asset('theme')}}/img/demo/avatars/avatar-m.png" class="rounded-circle shadow-2 img-thumbnail" alt="">
                                 <h5 class="mb-0 fw-700 text-center mt-3">
-                                    Dr. Codex Lantern
+                                   {{ Auth::user()->first_name .' '. Auth::user()->last_name }}
                                     <small class="text-muted mb-0">Cameroon</small>
                                 </h5>
                                 <div class="mt-4 text-center demo">
@@ -69,7 +69,41 @@
                                 </h5>
                             </div>
                         </div>
-
+                    </div>
+                </div>
+                <!-- add : -->
+                <div class="card mb-2">
+                    <div class="card-body">
+                        <a href="javascript:void(0);" class="d-flex flex-row align-items-center">
+                            <div class='icon-stack display-3 flex-shrink-0'>
+                                <i class="fal fa-circle icon-stack-3x opacity-100 color-primary-400"></i>
+                                <i class="fas fa-graduation-cap icon-stack-1x opacity-100 color-primary-500"></i>
+                            </div>
+                            <div class="ml-3">
+                                <strong>
+                                    Add Awards
+                                </strong>
+                                <br>
+                                Adding qualifications will help gain more clients
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="card mb-g">
+                    <div class="card-body">
+                        <a href="javascript:void(0);" class="d-flex flex-row align-items-center">
+                            <div class='icon-stack display-3 flex-shrink-0'>
+                                <i class="fal fa-circle icon-stack-3x opacity-100 color-warning-400"></i>
+                                <i class="fas fa-handshake icon-stack-1x opacity-100 color-warning-500"></i>
+                            </div>
+                            <div class="ml-3">
+                                <strong>
+                                    Add Skills
+                                </strong>
+                                <br>
+                                Gain more potential clients by adding skills
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -104,7 +138,7 @@
                 <div id="panel-5" class="panel">
                     <div class="panel-hdr">
                         <h2>
-                            Accordion <span class="fw-300"><i>hover</i></span>
+                            Users <span class="fw-300"><i>Info</i></span>
                         </h2>
                         <div class="panel-toolbar">
                             <button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-offset="0,10" data-original-title="Collapse"></button>
@@ -114,9 +148,6 @@
                     </div>
                     <div class="panel-container show">
                         <div class="panel-content">
-                            <div class="panel-tag">
-                                Adding a hover effect adds nice element to your accordion. Achieve this by adding class <code>.accordion-hover</code> to <code>.accordion</code>
-                            </div>
                             <div class="accordion accordion-hover" id="js_demo_accordion-5">
                                 <div class="card">
                                     <div class="card-header">
@@ -190,42 +221,6 @@
                 <!-- post article - end -->
             </div>
             <div class="col-lg-6 col-xl-3 order-lg-2 order-xl-3">
-                <!-- add : -->
-                <div class="card mb-2">
-                    <div class="card-body">
-                        <a href="javascript:void(0);" class="d-flex flex-row align-items-center">
-                            <div class='icon-stack display-3 flex-shrink-0'>
-                                <i class="fal fa-circle icon-stack-3x opacity-100 color-primary-400"></i>
-                                <i class="fas fa-graduation-cap icon-stack-1x opacity-100 color-primary-500"></i>
-                            </div>
-                            <div class="ml-3">
-                                <strong>
-                                    Add Qualifications
-                                </strong>
-                                <br>
-                                Adding qualifications will help gain more clients
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="card mb-g">
-                    <div class="card-body">
-                        <a href="javascript:void(0);" class="d-flex flex-row align-items-center">
-                            <div class='icon-stack display-3 flex-shrink-0'>
-                                <i class="fal fa-circle icon-stack-3x opacity-100 color-warning-400"></i>
-                                <i class="fas fa-handshake icon-stack-1x opacity-100 color-warning-500"></i>
-                            </div>
-                            <div class="ml-3">
-                                <strong>
-                                    Add Skills
-                                </strong>
-                                <br>
-                                Gain more potential clients by adding skills
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
                 <!-- skills -->
                 <div class="card mb-g">
                     <div class="row row-grid no-gutters">
@@ -238,13 +233,7 @@
                         </div>
                         <div class="col-12">
                             <div class="p-3">
-                                <h5 class="text-danger">
-                                    Xray improvement algorythm
-                                    <small class="mt-0 mb-3 text-muted">
-                                        Migration of new API to local servers
-                                    </small>
-                                    <span class="badge badge-danger fw-n position-absolute pos-top pos-right mt-3 mr-3">Delayed</span>
-                                </h5>
+
                                 <div class="row fs-b fw-300">
                                     <div class="col text-left">
                                         Progress
@@ -270,13 +259,6 @@
                         </div>
                         <div class="col-12">
                             <div class="p-3">
-                                <h5>
-                                    Radioactive Isotope Research
-                                    <small class="mt-0 mb-3 text-muted">
-                                        Accelerator based methods of Technetium99m production – target preparation and processing and beam monitoring technologies
-                                    </small>
-                                    <span class="badge badge-primary fw-n position-absolute pos-top pos-right mt-3 mr-3">A</span>
-                                </h5>
                                 <div class="row fs-b fw-300">
                                     <div class="col text-left">
                                         Progress
