@@ -75,16 +75,17 @@
                     <div class="col-xs-10 text-right menu-1">
                         <ul>
                             <li class="active"><a href="#">Home</a></li>
-                            <li><a href="#">Portfolio</a></li>
-                            <li class="has-dropdown">
-                                <a href="#">Blog</a>
-                                <ul class="dropdown">
-                                    <li><a href="#">Web Design</a></li>
-                                    <li><a href="#">eCommerce</a></li>
-                                    <li><a href="#">Branding</a></li>
-                                    <li><a href="#">API</a></li>
+                            <li class="btn-cta"><a href="#"><span> Job </span></a></li>
+                            <li><a href="#">Make Offer</a></li>
+                            <!-- <li class="has-dropdown">
+                                 <a href="#">Make Offer</a>
+                                 <ul class="dropdown">
+                                      <li><a href="#">Web Design</a></li>
+                                     <li><a href="#">eCommerce</a></li>
+                                     <li><a href="#">Branding</a></li>
+                                     <li><a href="#">API</a></li>
                                 </ul>
-                            </li>
+                            </li>-->
                             <li><a href="about.html">About</a></li>
                             <li><a href="contact.html">Contact</a></li>
                             <li class="btn-cta"><a href=" {{ route('login') }} "><span>Login</span></a></li>
@@ -105,9 +106,9 @@
                 <div class="col-md-8 col-md-offset-2 text-center">
                     <div class="display-t js-fullheight">
                         <div class="display-tc js-fullheight animate-box" data-animate-effect="fadeIn">
-                            <h1>Creativity Is A Wild Mind &amp; A Disciplined Eye </h1>
+                            <h1>Creativity Is A Wild Mind  </h1>
                             <h2>Free html5 templates Made by <a href="http://freehtml5.co/" target="_blank">freehtml5.co</a></h2>
-                            <p><a class="btn btn-primary btn-lg btn-demo" href="#"></i> View Demo</a> <a class="btn btn-primary btn-lg btn-learn">Learn More</a></p>
+                            <p><a class="btn btn-primary btn-lg btn-demo" href="#"></i> Employer</a> <a class="btn btn-primary btn-lg btn-learn">Worker</a></p>
                         </div>
                     </div>
                 </div>

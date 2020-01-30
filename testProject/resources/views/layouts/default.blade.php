@@ -47,7 +47,7 @@
             <!-- BEGIN Page Content -->
             <!-- the #js-page-content id is needed for some plugins to initialize -->
             <main id="js-page-content" role="main" class="page-content">
-               <app-component></app-component>
+               @yield('contenu')
             </main>
             <!-- this overlay is activated only when mobile menu is triggered -->
             <div class="page-content-overlay" data-action="toggle" data-class="mobile-nav-on"></div> <!-- END Page Content -->
@@ -128,6 +128,7 @@
 </div>
 <!-- END Page Wrapper -->
 <!-- Scripts -->
+@yield('script')
 <script src="{{ asset('js/app.js') }}"></script>
 <script src="{{asset('theme')}}/js/vendors.bundle.js"></script>
 <script src="{{asset('theme')}}/js/app.bundle.js"></script>

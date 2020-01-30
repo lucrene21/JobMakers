@@ -5,7 +5,8 @@
  */
 
 namespace App\Models;
-
+use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Notifications\Notifiable;
 
 
 /**
@@ -43,9 +44,9 @@ namespace App\Models;
  *
  * @package App\Models
  */
-class User extends \Illuminate\Database\Eloquent\Model
+class User extends Authenticatable
 {
-	use \Illuminate\Database\Eloquent\SoftDeletes;
+	use \Illuminate\Database\Eloquent\SoftDeletes, Notifiable;
 	protected $table = 'user';
 
 	protected $casts = [
@@ -65,7 +66,7 @@ class User extends \Illuminate\Database\Eloquent\Model
 	];
 
 	protected $fillable = [
-		'role_id',
+	    'role_id',
 		'password',
 		'email',
 		'phone',

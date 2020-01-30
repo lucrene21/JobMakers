@@ -8,8 +8,8 @@
             <div class="d-flex align-items-center container p-0">
                 <div class="page-logo width-mobile-auto m-0 align-items-center justify-content-center p-0 bg-transparent bg-img-none shadow-0 height-9">
                     <a href="javascript:void(0)" class="page-logo-link press-scale-down d-flex align-items-center">
-                        <img src="img/logo.png" alt="SmartAdmin WebApp" aria-roledescription="logo">
-                        <span class="page-logo-text mr-1">SmartAdmin WebApp</span>
+                        <img src="img/logo.png" alt="JobMaker WebApp" aria-roledescription="logo">
+                        <span class="page-logo-text mr-1">JobMaker WebApp</span>
                     </a>
                 </div>
                 <a href="{{ route('register') }}" class="btn-link text-white ml-auto">
@@ -22,9 +22,12 @@
                 <div class="row">
                     <div class="col col-md-6 col-lg-7 hidden-sm-down">
                         <h2 class="fs-xxl fw-500 mt-4 text-white">
-                            The simplest UI toolkit for developers &amp; programmers
+                            The simplest Platform  for Workers &amp; Employers
                             <small class="h3 fw-300 mt-3 mb-5 text-white opacity-60">
-                                Presenting you with the next level of innovative UX design and engineering. The most modular toolkit available with over 600+ layout permutations. Experience the simplicity of SmartAdmin, everywhere you go!
+                                Presenting you the new Freelance Platform JobMaker .
+                                The most efficient and effective means to find a worker and get a job online.
+                                Experience the simplicity of JobMaker, everywhere you go!
+                                <br>Sign-in to your <a  href="{{route('login')}}" class="btn-link text-whitte ml-auto">  Account Now</a>
                             </small>
                         </h2>
                         <a href="#" class="fs-lg fw-500 text-white opacity-70">Learn more &gt;&gt;</a>
@@ -57,8 +60,11 @@
                                 @csrf
 
                                 <div class="form-group">
-                                    <label class="form-label" for="username">Email</label>
-                                    <input type="email" id="username" class="form-control form-control-lg @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="Your unique email to app">
+                                    <label class="form-label" for="username">Email
+                                        <span class="text-danger">*</span>
+                                    </label>
+                                    <input type="email" id="username" class="form-control form-control-lg @error('email') is-invalid @enderror" name="email"
+                                           value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="Enter Your Email">
 
                                     @error('email')
                                     <span class="invalid-feedback" role="alert">
@@ -67,8 +73,11 @@
                                     @enderror
                                 </div>
                                 <div class="form-group">
-                                    <label class="form-label" for="password">Password</label>
-                                    <input type="password" id="password" class="form-control form-control-lg @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" placeholder="Your password">
+                                    <label class="form-label" for="password">Password
+                                        <span class="text-danger">*</span>
+                                    </label>
+                                    <input type="password" id="password" class="form-control form-control-lg @error('password') is-invalid @enderror"
+                                           name="password" required autocomplete="current-password" placeholder="Your password">
 
                                     @error('password')
                                     <span class="invalid-feedback" role="alert">
