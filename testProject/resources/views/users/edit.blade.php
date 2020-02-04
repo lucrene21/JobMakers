@@ -99,6 +99,11 @@
                                         <div class="invalid-feedback">Sorry, you missed this one.</div>
                                     </div>
 
+                                    <div class="row no-gutters">
+                                        <div class="col-md-4 ml-auto text-right">
+                                            <a href="passwords.reset"><button class="btn btn-block btn-primary btn-lg mt-3">update</button> </a>
+                                        </div>
+                                    </div>
                                 </form>
                             </div>
                         </div>

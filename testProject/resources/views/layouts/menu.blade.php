@@ -39,7 +39,7 @@
         </li>
 
         <li class="">
-            <a href="#" title="manage payments" data-filter-tags="manage payments">
+            <a href="{{ route('payments.index') }}" title="manage payments" data-filter-tags="manage payments">
                 <i class="fas fa-money-bill-alt"></i>
                 <span class="nav-link-text" data-i18n="nav.application_intel">Manage Payments</span>
             </a>
@@ -52,24 +52,17 @@
             </a>
             <ul>
                 <li class="">
-                    <a href="#" title="Analytics Dashboard" data-filter-tags="application intel analytics dashboard">
+                    <a href="{{ route('jobs.index') }}" title="Analytics Dashboard" data-filter-tags="application intel analytics dashboard">
                         <i class="fas fa-laptop"></i>
                         <span class="nav-link-text" data-i18n="nav.application_intel_analytics_dashboard">View Job</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#" title="Marketing Dashboard" data-filter-tags="application intel marketing dashboard">
+                    <a href="{{ route('offers.index') }}" title="Marketing Dashboard" data-filter-tags="application intel marketing dashboard">
                         <i class="fas fa-laptop"></i>
                         <span class="nav-link-text" data-i18n="nav.application_intel_marketing_dashboard">View Offer</span>
                     </a>
                 </li>
-                <li>
-                    <a href="#" title="Introduction" data-filter-tags="application intel introduction">
-                        <i class="fas fa-handshake"></i>
-                        <span class="nav-link-text" data-i18n="nav.application_intel_introduction">View Work</span>
-                    </a>
-                </li>
-
                 <li>
                     <a href="#" title="Introduction" data-filter-tags="application intel introduction">
                         <i class="fas fa-handshake"></i>
