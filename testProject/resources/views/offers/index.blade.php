@@ -48,6 +48,7 @@
                                     <th>Minimum price</th>
                                     <th>Maximum price</th>
                                     <th>Delivery time (days) </th>
+                                    <th>Creation Date</th>
                                     <th>Actions</th>
                                 </tr>
                                 </thead>

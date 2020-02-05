@@ -25,3 +25,4 @@
         Route::resource('/payments',  'PaymentController')->middleware('auth');
         Route::resource('/jobs', 'JobController')->middleware('auth');
         Route::resource('/offers', 'OfferController')->middleware('auth');
+        Route::resource('/orders', 'OrderController')->middleware('auth');

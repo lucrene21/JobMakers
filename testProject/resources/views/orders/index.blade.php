@@ -8,14 +8,15 @@
     <div>
         <ol class="breadcrumb page-breadcrumb">
             <li class="breadcrumb-item"><a href="javascript:void(0);">JobMaker</a></li>
-            <li class="breadcrumb-item">Payment</li>
+            <li class="breadcrumb-item">Order</li>
+            <li class="breadcrumb-item active">Profile</li>
             <li class="position-absolute pos-top pos-right d-none d-sm-block"><span class="js-get-date"></span></li>
         </ol>
         <div class="subheader">
             <h1 class="subheader-title">
-                <i class="fas fa-user-circle"></i> Payments
+                <i class="fas fa-user-circle"></i> Orders
                 <small>
-                    Payment Details
+                    Profile layout
                 </small>
             </h1>
         </div>
@@ -24,11 +25,11 @@
                 <div id="panel-1" class="panel">
                     <div class="panel-hdr">
                         <h2>
-                            List of all <span class="fw-300"><i>Users</i></span>
+                            List of all <span class="fw-300"><i>Orders</i></span>
                         </h2>
                         <div class="panel-toolbar">
                             <button class="btn btn-primary btn-sm">
-                                <span class="fas fa-user-plus mr-1"></span> Add User
+                                <span class="fas fa-user-plus mr-1"></span> Add Order
                             </button>
                         </div>
                     </div>
@@ -42,27 +43,33 @@
                                 <thead>
                                 <tr>
                                     <th>#</th>
-                                    <th>reference</th>
-                                    <th>Payment Method</th>
-                                    <th>status</th>
-                                    <th>amount</th>
-                                    <th>Initiation day</th>
+                                    <th>Price</th>
+                                    <th>Start Date</th>
+                                    <th>End Date</th>
+                                    <th>State</th>
+                                    <th>Creation Date</th>
                                     <th>Actions</th>
                                 </tr>
                                 </thead>
                                 <tbody>
-                                @if(isset($payments) && count($payments) > 0)
-                                    @foreach($payments as $key => $payment)
+                                @if(isset($orders) && count($orders) > 0)
+                                    @foreach($orders as $key => $order)
                                         <tr>
                                             <td>{{ $key }}</td>
-                                            <td>{{ $payment->reference }}</td>
-                                            <td>{{ $payment->payment_method_id}}</td>
-                                            <td>{{ $payment->status}}</td>
-                                            <td>{{ $payment->amount }}</td>
-                                            <td>{{ $payment->created_at->format('d-m-Y  H:m:s') }}</td>
+                                            <td>{{ $order->price }}</td>
+                                            <td>{{ $order->started_at }}</td>
+                                            <td>{{ $order->ended_at }}</td>
+                                            <td>{{ $order->state }}</td>
+                                            <td>{{ $order->created_at->format('d-m-Y  H:m:s') }}</td>
                                             <td>
-                                                <a title="show users profile" href="{{route('payments.show',$payment->id)}}" class="btn btn-info btn-icon rounded-circle waves-effect waves-themed">
+                                                <a title="show jobs profile" href="{{ route('orders.show', $order->id) }}" class="btn btn-info btn-icon rounded-circle waves-effect waves-themed">
                                                     <i class="fal fa-eye"></i>
+                                                </a>
+                                                <a title="update job" href="{{ route('orders.edit', $order->id) }}" class="btn btn-warning btn-icon rounded-circle waves-effect waves-themed">
+                                                    <i class="fal fa-edit"></i>
+                                                </a>
+                                                <a title="delete job" href="{{ route('orders.destroy', $order->id) }}" class="btn btn-danger btn-icon rounded-circle waves-effect waves-themed">
+                                                    <i class="fal fa-trash"></i>
                                                 </a>
                                             </td>
                                         </tr>

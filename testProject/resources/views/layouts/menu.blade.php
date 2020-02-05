@@ -64,7 +64,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#" title="Introduction" data-filter-tags="application intel introduction">
+                    <a href=" {{ route('orders.index') }}" title="Introduction" data-filter-tags="application intel introduction">
                         <i class="fas fa-handshake"></i>
                         <span class="nav-link-text" data-i18n="nav.application_intel_introduction">View Order</span>
                     </a>
