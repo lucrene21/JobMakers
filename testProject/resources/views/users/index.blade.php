@@ -27,11 +27,14 @@
                         <h2>
                             List of all <span class="fw-300"><i>Users</i></span>
                         </h2>
-                        <div class="panel-toolbar">
-                            <button class="btn btn-primary btn-sm">
-                                <span class="fas fa-user-plus mr-1"></span> Add User
-                            </button>
-                        </div>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">Add User</button>
+                        @include('users.create')
+
+                        {{--                        <div class="panel-toolbar">--}}
+{{--                            <a href="{{ route('users.create') }}"><button class="btn btn-primary btn-sm">--}}
+{{--                               <span class="fas fa-user-plus mr-1"></span> Add User--}}
+{{--                            </button></a>--}}
+{{--                        </div>--}}
                     </div>
                     <div class="panel-container show">
                         <div class="panel-content">
@@ -43,6 +46,7 @@
                                 <thead>
                                 <tr>
                                     <th>#</th>
+                                    <th>Role</th>
                                     <th>Email</th>
                                     <th>Name</th>
                                     <th>Phone</th>
@@ -55,6 +59,7 @@
                                         @foreach($users as $key => $user)
                                             <tr>
                                                 <td>{{ $key }}</td>
+                                                <td>{{ $user->role_id }}</td>
                                                 <td>{{ $user->email }}</td>
                                                 <td>{{ $user->first_name . ' ' . $user->last_name }}</td>
                                                 <td>{{ $user->phone }}</td>
@@ -66,9 +71,18 @@
                                                     <a title="update user" href="{{ route('users.edit', $user->id) }}" class="btn btn-warning btn-icon rounded-circle waves-effect waves-themed">
                                                         <i class="fal fa-edit"></i>
                                                     </a>
-                                                    <a title="delete user" href="{{ route('users.destroy', $user->id) }}" class="btn btn-danger btn-icon rounded-circle waves-effect waves-themed">
-                                                        <i class="fal fa-trash"></i>
+                                                    <a title="delete user" class="btn btn-danger btn-icon rounded-circle waves-effect waves-themed">
+                                                        <form action="{{ route('users.destroy', $user->id) }}" method="POST">
+                                                            @csrf
+                                                            @method('delete')
+                                                            <button type="submit" class="btn btn-danger">
+                                                                <i class="fal fa-trash"></i>
+                                                            </button>
+                                                        </form>
                                                     </a>
+{{--                                                    <a title="delete user" href="{{ route( 'delete', $user->id ) }}" class="btn btn-danger btn-icon rounded-circle waves-effect waves-themed">--}}
+{{--                                                        <i class="fal fa-trash"></i>--}}
+{{--                                                    </a>--}}
                                                 </td>
                                             </tr>
                                         @endforeach

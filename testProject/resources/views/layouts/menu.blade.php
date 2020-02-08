@@ -38,7 +38,7 @@
             </a>
         </li>
 
-        <li class="">
+        <li class="{{ Route::is('payments.index') ? 'active' : '' }}">
             <a href="{{ route('payments.index') }}" title="manage payments" data-filter-tags="manage payments">
                 <i class="fas fa-money-bill-alt"></i>
                 <span class="nav-link-text" data-i18n="nav.application_intel">Manage Payments</span>
@@ -51,7 +51,7 @@
                 <span class="nav-link-text" data-i18n="nav.application_intel">Manage Job</span>
             </a>
             <ul>
-                <li class="">
+                <li class="{{ Route::is('jobs.*') ? 'active' : '' }}">
                     <a href="{{ route('jobs.index') }}" title="Analytics Dashboard" data-filter-tags="application intel analytics dashboard">
                         <i class="fas fa-laptop"></i>
                         <span class="nav-link-text" data-i18n="nav.application_intel_analytics_dashboard">View Job</span>
@@ -72,7 +72,7 @@
             </ul>
         </li>
 
-        <li class="{{ Route::is('users.*') ? 'active' : '' }}">
+        <li class="{{ Route::is('users.index') ? 'active' : '' }}">
             <a href="{{ route('users.index') }}" title="Application Intel" data-filter-tags="application intel">
                 <i class="fas fa-user-circle"></i>
                 <span class="nav-link-text" data-i18n="nav.application_intel">Manage Users</span>

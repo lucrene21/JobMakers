@@ -20,16 +20,17 @@
                         </div>
                         <div class="col-xl-6 ml-auto mr-auto">
                             <div class="card p-4 rounded-plus bg-faded">
-                                <form id="js-login" novalidate="" method="POST" action="{{ route('register') }}">
+                                <form id="js-login" novalidate="" method="POST" action="{{ route('users.update', $user->id) }}">
 
                                     @csrf
+                                    @method('put')
 
                                     <div class="form-group">
                                         <label class="form-label" for="first_name">First Name
                                             <span class="text-danger">*</span>
                                         </label>
                                         <input type="text" id="fisrt_name" class="form-control @error('first_name') is-invalid @enderror"
-                                               name="first_name" value="{{ old('first_name') }}"  required placeholder="Edit your first name"/>
+                                               name="first_name" value="{{ $user->first_name }}"  required placeholder="Edit your first name"/>
                                         @error('first_name')
                                         <span class="invalid-feedback" role="alert">
                                                    <strong>{{ $message }}</strong>
@@ -41,7 +42,7 @@
                                         <label class="form-label" for="last_name">last Name
                                             <span class="text-danger">*</span></label>
                                         <input type="text" id="last_name" class="form-control @error('last_name') is-invalid @enderror" name="last_name"
-                                               value="{{ old('last_name') }}" required placeholder="Enter your last name">
+                                               value="{{ $user->last_name }}" required placeholder="Enter your last name">
                                         @error('last_name')
                                         <span class="invalid-feedback" role="alert">
                                                <strong>{{ $message }}</strong>
@@ -54,7 +55,7 @@
                                             <span class="text-danger">*</span>
                                         </label>
                                         <input type="numeric" id="phone" class="form-control @error('phone') is-invalid @enderror" name="phone"
-                                               value="{{ old('phone') }}" required placeholder="Enter your phone number">
+                                               value="{{ $user->phone }}" required placeholder="Enter your phone number">
                                         @error('phone')
                                         <span class="invalid-feedback" role="alert">
                                                <strong>{{ $message }}</strong>
@@ -65,7 +66,7 @@
                                     <div class="form-group">
                                         <label class="form-label" for="role">Account type</label>
                                         <select id="role" class="form-control @error('role_id') is-invalid @enderror" name="role_id" value="{{ old('role_id') }}" required>
-                                            <option value="{{ null  }}">Choose the account type</option>
+                                            <option value="{{ $user->role_id }}">Choose the account type</option>
                                             @foreach($roles as $role)
                                                 <option value="{{ $role->id }}">{{ $role->label }}</option>
                                             @endforeach
@@ -82,26 +83,16 @@
                                             <span class="text-danger">*</span>
                                         </label>
                                         <input type="email" id="emailverify" class="form-control @error('email') is-invalid @enderror" name="email"
-                                               value="{{ old('email') }}" required placeholder="Enter your email" >
+                                               value="{{$user->email}}" required placeholder="Enter your email" >
                                         @error('email')
                                         <span class="invalid-feedback" role="alert">
                                                   <strong>{{ $message }}</strong>
                                             </span>
                                         @enderror
                                     </div>
-
-                                    <div class="form-group">
-                                        <label class="form-label" for="password-confirm">Confirm password:
-                                            <span class="text-danger">*</span>
-                                        </label>
-                                        <input id="password-confirm" type="password" class="form-control" name="password_confirmation"
-                                               required autocomplete="new-password" placeholder="Confirm your password">
-                                        <div class="invalid-feedback">Sorry, you missed this one.</div>
-                                    </div>
-
                                     <div class="row no-gutters">
                                         <div class="col-md-4 ml-auto text-right">
-                                            <a href="passwords.reset"><button class="btn btn-block btn-primary btn-lg mt-3">update</button> </a>
+                                            <button class="btn btn-block btn-primary btn-lg mt-3">update</button>
                                         </div>
                                     </div>
                                 </form>
@@ -113,3 +104,4 @@
         </div>
     </div>
 @endsection
+

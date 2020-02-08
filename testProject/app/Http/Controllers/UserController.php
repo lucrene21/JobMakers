@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Role;
 use App\Models\User;
 use Illuminate\Http\Request;
+use MercurySeries\Flashy\Flashy;
+
 
 class UserController extends Controller
 {
@@ -15,8 +17,11 @@ class UserController extends Controller
      */
     public function index()
     {
+
+
         return view('users.index', [
-            'users' => User::all()
+            'users' => User::all(),
+            'roles' => Role::all()
         ]);
     }
 
@@ -27,7 +32,9 @@ class UserController extends Controller
      */
     public function create()
     {
+//        $roles = Role::all();
         return view('users.create');
+//        return redirect()->back()->with(['message' => 'Utilisateur supprime avec success']);
     }
 
     /**
@@ -38,6 +45,7 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
+
         $request->validate([
             'first_name' => 'required|string|max:255',
             'last_name' => 'required|string|max:255',
@@ -49,8 +57,11 @@ class UserController extends Controller
             'role_id' => Role::where('code', 'ADM')->first()->id
         ]);
         $user = User::create($request->all());
-        if ($user)
+        if ($user){
+
             return redirect()->to(route('users.index'))->with(['message' => 'Nouveau utilisateur enregistre avec success']);
+            Flashy::message('Welcome Aboard!');
+        }
         else
             return redirect()->back()->with(['error' => 'Erreur lors de l\'enregistrement de l\'utilisateur']);
     }
@@ -111,7 +122,8 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        User::find($id)->delete();
-        return redirect()->back(route('users.index'))->with(['message' => 'Utilisateur supprime avec success']);
+        User::destroy($id);
+        return redirect()->back()->with(['message' => 'Utilisateur supprime avec success']);
     }
+
 }

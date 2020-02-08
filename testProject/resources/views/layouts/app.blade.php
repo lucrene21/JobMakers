@@ -32,6 +32,8 @@
 <div class="page-wrapper">
     @yield('content')
 </div>
+<script src="//code.jquery.com/jquery.js"></script>
+@include('flashy::message')
 <!-- END Page Wrapper -->
 <!-- Scripts -->
 <script src="{{ asset('js/app.js') }}" defer></script>
