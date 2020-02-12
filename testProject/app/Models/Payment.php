@@ -10,7 +10,7 @@ namespace App\Models;
 
 /**
  * Class Payment
- * 
+ *
  * @property int $id
  * @property int $payment_method_id
  * @property int $order_id
@@ -24,7 +24,7 @@ namespace App\Models;
  * @property string $reference
  * @property string $transaction_id
  * @property string $status
- * 
+ *
  * @property \App\Models\Order $order
  * @property \App\Models\PaymentMethod $payment_method
  *

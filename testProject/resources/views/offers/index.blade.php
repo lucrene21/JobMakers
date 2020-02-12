@@ -47,7 +47,6 @@
                                     <th>Description</th>
                                     <th>Minimum price</th>
                                     <th>Maximum price</th>
-                                    <th>Delivery time (days) </th>
                                     <th>Creation Date</th>
                                     <th>Actions</th>
                                 </tr>
@@ -61,7 +60,6 @@
                                             <td>{{ $offer->description }}</td>
                                             <td>{{ $offer->price_min }}</td>
                                             <td>{{ $offer->price_max }}</td>
-                                            <td>{{ $offer->delivery_time }}</td>
                                             <td>{{ $offer->created_at->format('d-m-Y  H:m:s') }}</td>
                                             <td>
                                                 <a title="show jobs profile" href="{{ route('offers.show', $offer->id) }}" class="btn btn-info btn-icon rounded-circle waves-effect waves-themed">
@@ -70,8 +68,14 @@
                                                 <a title="update job" href="{{ route('offers.edit', $offer->id) }}" class="btn btn-warning btn-icon rounded-circle waves-effect waves-themed">
                                                     <i class="fal fa-edit"></i>
                                                 </a>
-                                                <a title="delete job" href="{{ route('offers.destroy', $offer->id) }}" class="btn btn-danger btn-icon rounded-circle waves-effect waves-themed">
-                                                    <i class="fal fa-trash"></i>
+                                                <a title="delete user" class="btn btn-danger btn-icon rounded-circle waves-effect waves-themed">
+                                                    <form action="{{ route('offers.destroy', $offer->id) }}" method="POST">
+                                                        @csrf
+                                                        @method('delete')
+                                                        <button type="submit" class="btn btn-danger">
+                                                            <i class="fal fa-trash"></i>
+                                                        </button>
+                                                    </form>
                                                 </a>
                                             </td>
                                         </tr>

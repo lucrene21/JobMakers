@@ -8,13 +8,13 @@
     <div>
         <ol class="breadcrumb page-breadcrumb">
             <li class="breadcrumb-item"><a href="javascript:void(0);">JobMaker</a></li>
-            <li class="breadcrumb-item">Job</li>
+            <li class="breadcrumb-item">Order</li>
             <li class="breadcrumb-item active">Profile</li>
             <li class="position-absolute pos-top pos-right d-none d-sm-block"><span class="js-get-date"></span></li>
         </ol>
         <div class="subheader">
             <h1 class="subheader-title">
-                <i class="fas fa-user-circle"></i> Jobs
+                <i class="fas fa-user-circle"></i> Orders
                 <small>
                     Profile layout
                 </small>
@@ -25,7 +25,7 @@
                 <div id="panel-1" class="panel">
                     <div class="panel-hdr">
                         <h2>
-                            List of all <span class="fw-300"><i>Jobs</i></span>
+                            List of all <span class="fw-300"><i>Orders</i></span>
                         </h2>
                     </div>
                     <div class="panel-container show">
@@ -38,27 +38,25 @@
                                 <thead>
                                 <tr>
                                     <th>#</th>
-                                    <th>Job Label</th>
-                                    <th>Type</th>
-                                    <th>Minimum price</th>
-                                    <th>Maximum price</th>
-                                    <th>Localisaton ID </th>
-                                    <th>Category id </th>
-                                    <th>Delivery time (days) </th>
+                                    <th>Job ID</th>
+                                    <th>Price</th>
+                                    <th>Start Date</th>
+                                    <th>End Date</th>
+                                    <th>State</th>
+                                    <th>Creation Date</th>
                                 </tr>
                                 </thead>
                                 <tbody>
-                                @if(isset($jobs) && count($jobs) > 0)
-                                    @foreach($jobs as $key => $job)
+                                @if(isset($orders) && count($orders) > 0)
+                                    @foreach($orders as $key => $order)
                                         <tr>
                                             <td>{{ $key }}</td>
-                                            <td>{{ $job->label }}</td>
-                                            <td>{{ $job->type }}</td>
-                                            <td>{{ $job->price_min }}</td>
-                                            <td>{{ $job->price_max }}</td>
-                                            <td>{{ $job->localisation_id }}</td>
-                                            <td>{{ $job->category_id }}</td>
-                                            <td>{{ $job->created_at->format('d-m-Y  H:m:s') }}</td>
+                                            <td>{{ $order->job_id}}</td>
+                                            <td>{{ $order->price }}</td>
+                                            <td>{{ $order->started_at }}</td>
+                                            <td>{{ $order->ended_at }}</td>
+                                            <td>{{ $order->state }}</td>
+                                            <td>{{ $order->created_at->format('d-m-Y  H:m:s') }}</td>
                                         </tr>
                                     @endforeach
                                 @endif
@@ -83,3 +81,4 @@
         });
     </script>
 @endsection
+

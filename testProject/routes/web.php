@@ -21,6 +21,10 @@
 
         Route::get('/home', 'HomeController@index')->name('home');
         Route::post('/users/{$id}/destroy', 'UserController@destroy');
+        Route::post('/jobs/{$id}/destroy', 'JobController@destroy');
+        Route::post('/offers/{$id}/destroy', 'OfferController@destroy');
+        Route::post('/orders/{$id}/destroy', 'OrderController@destroy');
+
 
 
         Route::resource('/users',  'UserController')->middleware('auth');

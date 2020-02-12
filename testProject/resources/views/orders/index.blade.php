@@ -43,9 +43,8 @@
                                 <thead>
                                 <tr>
                                     <th>#</th>
+                                    <th>Job ID</th>
                                     <th>Price</th>
-                                    <th>Start Date</th>
-                                    <th>End Date</th>
                                     <th>State</th>
                                     <th>Creation Date</th>
                                     <th>Actions</th>
@@ -56,9 +55,8 @@
                                     @foreach($orders as $key => $order)
                                         <tr>
                                             <td>{{ $key }}</td>
+                                            <td>{{ $order->job_id }}</td>
                                             <td>{{ $order->price }}</td>
-                                            <td>{{ $order->started_at }}</td>
-                                            <td>{{ $order->ended_at }}</td>
                                             <td>{{ $order->state }}</td>
                                             <td>{{ $order->created_at->format('d-m-Y  H:m:s') }}</td>
                                             <td>
@@ -68,8 +66,14 @@
                                                 <a title="update job" href="{{ route('orders.edit', $order->id) }}" class="btn btn-warning btn-icon rounded-circle waves-effect waves-themed">
                                                     <i class="fal fa-edit"></i>
                                                 </a>
-                                                <a title="delete job" href="{{ route('orders.destroy', $order->id) }}" class="btn btn-danger btn-icon rounded-circle waves-effect waves-themed">
-                                                    <i class="fal fa-trash"></i>
+                                                <a title="delete order" class="btn btn-danger btn-icon rounded-circle waves-effect waves-themed">
+                                                    <form action="{{ route('orders.destroy', $order->id) }}" method="POST">
+                                                        @csrf
+                                                        @method('delete')
+                                                        <button type="submit" class="btn btn-danger">
+                                                            <i class="fal fa-trash"></i>
+                                                        </button>
+                                                    </form>
                                                 </a>
                                             </td>
                                         </tr>

@@ -37,14 +37,16 @@ class PaymentController extends Controller
      */
     public function store(Request $request)
     {
+        dd($request->all());
         $request->validate([
-            'payment_method_id' => 'required|string|max:255',
+            'identifiant' => 'required|string|max:255',
             'amount' => 'required|string|max:255',
-            'fee' => 'required|string|email|unique:user',
-            'reference' => 'required|string|max:16|unique:user',
-            'status' => 'required|string|min:8|confirmed',
-             'order_id' => 'required|string|max:16|unique:user'
+            'fee' => 'required|string|email',
+            'reference' => 'required|string|max:16|unique:payment',
+            'status' => 'required|string',
+             'order_id' => 'required|string|max:16|unique:payment'
         ]);
+        dd('determine');
         $payment = Payment::create($request->all());
         if ($payment)
             return redirect()->to(route('payments.index'))->with(['message' => 'Payment saved']);
@@ -60,8 +62,11 @@ class PaymentController extends Controller
      */
     public function show($id)
     {
-        $payment = Payment::with(['payment_method_id', 'amount', 'fee', 'reference', 'status', 'order_id'])->find($id);
-        return view('payments.show', ['payment' => $payment]);
+//         $payment = Payment::with(['order', 'payment_method'])->find($id);
+        return view('payments.show', [
+            'payments' => Payment::all(),
+            'payment_methods'=>PaymentMethod::all()
+        ]);
     }
 
     /**

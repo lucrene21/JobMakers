@@ -27,6 +27,11 @@
                         <h2>
                             List of all <span class="fw-300"><i>Jobs</i></span>
                         </h2>
+                        <div class="panel-toolbar">
+                            <button class="btn btn-primary btn-sm">
+                                <span class="fas fa-user-plus mr-1"></span> Add Job
+                            </button>
+                        </div>
                     </div>
                     <div class="panel-container show">
                         <div class="panel-content">
@@ -42,9 +47,8 @@
                                     <th>Type</th>
                                     <th>Minimum price</th>
                                     <th>Maximum price</th>
-                                    <th>Localisaton ID </th>
-                                    <th>Category id </th>
                                     <th>Delivery time (days) </th>
+                                    <th>Actions</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -56,9 +60,25 @@
                                             <td>{{ $job->type }}</td>
                                             <td>{{ $job->price_min }}</td>
                                             <td>{{ $job->price_max }}</td>
-                                            <td>{{ $job->localisation_id }}</td>
-                                            <td>{{ $job->category_id }}</td>
+                                            <td>{{ $job->delivery_time }}</td>
                                             <td>{{ $job->created_at->format('d-m-Y  H:m:s') }}</td>
+                                            <td>
+                                                <a title="show jobs profile" href="{{ route('jobs.show', $job->id) }}" class="btn btn-info btn-icon rounded-circle waves-effect waves-themed">
+                                                    <i class="fal fa-eye"></i>
+                                                </a>
+                                                <a title="update job" href="{{ route('jobs.edit', $job->id) }}" class="btn btn-warning btn-icon rounded-circle waves-effect waves-themed">
+                                                    <i class="fal fa-edit"></i>
+                                                </a>
+                                                <a title="delete job" class="btn btn-danger btn-icon rounded-circle waves-effect waves-themed">
+                                                    <form action="{{ route('jobs.destroy', $job->id) }}" method="POST">
+                                                        @csrf
+                                                        @method('delete')
+                                                        <button type="submit" class="btn btn-danger">
+                                                            <i class="fal fa-trash"></i>
+                                                        </button>
+                                                    </form>
+                                                </a>
+                                            </td>
                                         </tr>
                                     @endforeach
                                 @endif
@@ -83,3 +103,4 @@
         });
     </script>
 @endsection
+

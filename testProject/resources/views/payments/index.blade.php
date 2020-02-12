@@ -13,7 +13,7 @@
         </ol>
         <div class="subheader">
             <h1 class="subheader-title">
-                <i class="fas fa-user-circle"></i> Payments
+                <i class="fas fa-user-circle"></i> {{ Auth::user()->first_name .' '. Auth::user()->last_name }}<br/>
                 <small>
                     Payment Details
                 </small>
@@ -24,14 +24,16 @@
                 <div id="panel-1" class="panel">
                     <div class="panel-hdr">
                         <h2>
-                            List of all <span class="fw-300"><i>Users</i></span>
+                            List of all <span class="fw-300"><i>Payments</i></span>
                         </h2>
                         <div class="panel-toolbar">
-                            <button class="btn btn-primary btn-sm">
-                                <span class="fas fa-user-plus mr-1"></span> Add User
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">
+                                Add Payment
                             </button>
+                            @include('payments.create')
                         </div>
                     </div>
+
                     <div class="panel-container show">
                         <div class="panel-content">
                             @if(isset($message))
@@ -43,9 +45,8 @@
                                 <tr>
                                     <th>#</th>
                                     <th>reference</th>
-                                    <th>Payment Method</th>
-                                    <th>status</th>
                                     <th>amount</th>
+                                    <th>status</th>
                                     <th>Initiation day</th>
                                     <th>Actions</th>
                                 </tr>
@@ -56,9 +57,8 @@
                                         <tr>
                                             <td>{{ $key }}</td>
                                             <td>{{ $payment->reference }}</td>
-                                            <td>{{ $payment->payment_method_id}}</td>
-                                            <td>{{ $payment->status}}</td>
                                             <td>{{ $payment->amount }}</td>
+                                            <td>{{ $payment->status}}</td>
                                             <td>{{ $payment->created_at->format('d-m-Y  H:m:s') }}</td>
                                             <td>
                                                 <a title="show users profile" href="{{route('payments.show',$payment->id)}}" class="btn btn-info btn-icon rounded-circle waves-effect waves-themed">

@@ -2,10 +2,17 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Award;
+use Illuminate\Support\Facades\Hash;
+use App\Models\Localisation;
+use App\Models\Offer;
 use App\Models\Role;
+use App\Models\Skill;
 use App\Models\User;
 use Illuminate\Http\Request;
 use MercurySeries\Flashy\Flashy;
+use Illuminate\Support\Facades\Validator;
+use Symfony\Component\Console\Input\Input;
 
 
 class UserController extends Controller
@@ -20,9 +27,9 @@ class UserController extends Controller
 
 
         return view('users.index', [
-            'users' => User::all(),
-            'roles' => Role::all()
-        ]);
+        'users' => User::all(),
+        'roles' => Role::all()
+    ]);
     }
 
     /**
@@ -51,10 +58,11 @@ class UserController extends Controller
             'last_name' => 'required|string|max:255',
             'email' => 'required|string|email|unique:user',
             'phone' => 'required|string|max:16|unique:user',
-            'password' => 'required|string|min:8|confirmed'
+            'password' => 'required|string|min:8|confirmed',
         ]);
         $request->merge([
-            'role_id' => Role::where('code', 'ADM')->first()->id
+            'role_id' => Role::where('code', 'ADM')->first()->id,
+            'password' => Hash::make(Input::get('password'))
         ]);
         $user = User::create($request->all());
         if ($user){
@@ -74,8 +82,16 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        $user = User::with(['awards', 'jobs', 'localisations', 'offers', 'orders', 'skills'])->find($id);
-        return view('users.show', ['user' => $user]);
+//        $user = User::with(['awards', 'label', 'description', 'offers', 'orders', 'skills'])->find($id);
+////        return view('users.show', ['user' => $user]);
+        return view('users.show', [
+            'users' => User::all(),
+            'roles' => Role::all(),
+            'skills' => Skill::all(),
+            'offers' => Offer::all(),
+            'localisations' => Localisation::all(),
+            'awards' => Award::all()
+        ]);
     }
 
     /**
