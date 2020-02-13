@@ -28,9 +28,10 @@
                             List of all <span class="fw-300"><i>Jobs</i></span>
                         </h2>
                         <div class="panel-toolbar">
-                            <button class="btn btn-primary btn-sm">
-                                <span class="fas fa-user-plus mr-1"></span> Add Job
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">
+                                Add Job
                             </button>
+                            @include('jobs.create')
                         </div>
                     </div>
                     <div class="panel-container show">

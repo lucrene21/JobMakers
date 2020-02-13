@@ -2,8 +2,12 @@
 
 namespace App\Http\Controllers;
 use App\models\Job;
+use App\Models\Role;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
+use MercurySeries\Flashy\Flashy;
+use Symfony\Component\Console\Input\Input;
 
 class JobController extends Controller
 {
@@ -22,22 +26,36 @@ class JobController extends Controller
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function create()
     {
-        //
+        return view('jobs.create');
     }
 
     /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\RedirectResponse
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'label' => 'required|string|max:255',
+            'description' => 'required|string|max:255',
+            'type' => 'required|string|max:16',
+            'price_max' => 'required|string|max:16',
+            'price_min' => 'required|string|max:16',
+        ]);
+        $job = Job::create($request->all());
+        if ($job){
+
+            return redirect()->to(route('jobs.index'))->with(['message' => 'Nouveau utilisateur enregistre avec success']);
+            Flashy::message('Welcome Aboard!');
+        }
+        else
+            return redirect()->back()->with(['error' => 'Erreur lors de l\'enregistrement de l\'utilisateur']);
     }
 
     /**
