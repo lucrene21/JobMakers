@@ -10,7 +10,7 @@ namespace App\Models;
 
 /**
  * Class Job
- * 
+ *
  * @property int $id
  * @property int $localisation_id
  * @property int $category_id
@@ -24,7 +24,7 @@ namespace App\Models;
  * @property float $price_min
  * @property float $price_max
  * @property int $delivery_time
- * 
+ *
  * @property \App\Models\Category $category
  * @property \App\Models\Localisation $localisation
  * @property \App\Models\User $user
@@ -46,7 +46,7 @@ class Job extends \Illuminate\Database\Eloquent\Model
 		'localisation_id' => 'int',
 		'category_id' => 'int',
 		'user_id' => 'int',
-		'price_min' => 'float',
+		' ' => 'float',
 		'price_max' => 'float',
 		'delivery_time' => 'int'
 	];

@@ -10,7 +10,7 @@ namespace App\Models;
 
 /**
  * Class Message
- * 
+ *
  * @property int $id
  * @property int $sender_id
  * @property int $receiver_id

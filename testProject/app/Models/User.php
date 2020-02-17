@@ -137,4 +137,22 @@ class User extends Authenticatable
 	{
 		return $this->hasMany(\App\Models\UserUser::class, 'user_id2');
 	}
+
+	public function messages() {
+	    return $this->hasMany(\App\Models\Message::class, 'receiver_id');
+    }
+
+	public function isAdmin() {
+	    return $this->role->code == config('jobmaker.codes.role.admin');
+    }
+    public function isWorker() {
+	    return $this->role->code == config('jobmaker.codes.role.worker');
+    }
+    public function isEmployer() {
+	    return $this->role->code == config('jobmaker.codes.role.employer');
+    }
+
+    public function countReadMessage() {
+	    return $this->messages()->where('is_read', false)->count();
+    }
 }

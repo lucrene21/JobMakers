@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\Job;
+use App\Models\Order;
 use App\Models\Payment;
 use App\Models\PaymentMethod;
 use App\Models\User;
@@ -62,10 +64,14 @@ class PaymentController extends Controller
      */
     public function show($id)
     {
-//         $payment = Payment::with(['order', 'payment_method'])->find($id);
+        $user = User::with(['order', 'job', 'offer'])->find($id);
+        $payment = Payment::with(['order', 'payment_method'])->find($id);
         return view('payments.show', [
-            'payments' => Payment::all(),
-            'payment_methods'=>PaymentMethod::all()
+            'payment' => $payment,
+            'payment_methods'=>PaymentMethod::all(),
+            'orders'=>Order::all(),
+            'jobs'=>Job::all(),
+            'user'=>$user
         ]);
     }
 

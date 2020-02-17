@@ -38,74 +38,108 @@
             </a>
         </li>
 
-        <li class="{{ Route::is('payments.index') ? 'active' : '' }}">
-            <a href="{{ route('payments.index') }}" title="manage payments" data-filter-tags="manage payments">
-                <i class="fas fa-money-bill-alt"></i>
-                <span class="nav-link-text" data-i18n="nav.application_intel">Manage Payments</span>
-            </a>
-        </li>
+       @auth()
+           @if(\Illuminate\Support\Facades\Auth::user()->isAdmin())
+                <li class="{{ Route::is('payments.index') ? 'active' : '' }}">
+                    <a href="{{ route('payments.index') }}" title="manage payments" data-filter-tags="manage payments">
+                        <i class="fas fa-money-bill-alt"></i>
+                        <span class="nav-link-text" data-i18n="nav.application_intel">Manage Payments</span>
+                    </a>
+                </li>
 
-        <li class="">
-            <a href="#" title="Application Intel" data-filter-tags="application intel">
-                <i class="fas fa-forklift"></i>
-                <span class="nav-link-text" data-i18n="nav.application_intel">Manage Job</span>
-            </a>
-            <ul>
-                <li class="{{ Route::is('jobs.*') ? 'active' : '' }}">
-                    <a href="{{ route('jobs.index') }}" title="Analytics Dashboard" data-filter-tags="application intel analytics dashboard">
-                        <i class="fas fa-laptop"></i>
-                        <span class="nav-link-text" data-i18n="nav.application_intel_analytics_dashboard">View Job</span>
+                <li class="">
+                    <a href="#" title="Application Intel" data-filter-tags="application intel">
+                        <i class="fas fa-forklift"></i>
+                        <span class="nav-link-text" data-i18n="nav.application_intel">Manage Job</span>
                     </a>
+                    <ul>
+                        <li class="{{ Route::is('jobs.*') ? 'active' : '' }}">
+                            <a href="{{ route('jobs.index') }}" title="Analytics Dashboard" data-filter-tags="application intel analytics dashboard">
+                                <i class="fas fa-laptop"></i>
+                                <span class="nav-link-text" data-i18n="nav.application_intel_analytics_dashboard">View Job</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('offers.index') }}" title="Marketing Dashboard" data-filter-tags="application intel marketing dashboard">
+                                <i class="fas fa-laptop"></i>
+                                <span class="nav-link-text" data-i18n="nav.application_intel_marketing_dashboard">View Offer</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href=" {{ route('orders.index') }}" title="Introduction" data-filter-tags="application intel introduction">
+                                <i class="fas fa-handshake"></i>
+                                <span class="nav-link-text" data-i18n="nav.application_intel_introduction">View Order</span>
+                            </a>
+                        </li>
+                    </ul>
                 </li>
-                <li>
-                    <a href="{{ route('offers.index') }}" title="Marketing Dashboard" data-filter-tags="application intel marketing dashboard">
-                        <i class="fas fa-laptop"></i>
-                        <span class="nav-link-text" data-i18n="nav.application_intel_marketing_dashboard">View Offer</span>
-                    </a>
-                </li>
-                <li>
-                    <a href=" {{ route('orders.index') }}" title="Introduction" data-filter-tags="application intel introduction">
-                        <i class="fas fa-handshake"></i>
-                        <span class="nav-link-text" data-i18n="nav.application_intel_introduction">View Order</span>
-                    </a>
-                </li>
-            </ul>
-        </li>
 
-        <li class="{{ Route::is('users.index') ? 'active' : '' }}">
-            <a href="{{ route('users.index') }}" title="Application Intel" data-filter-tags="application intel">
-                <i class="fas fa-user-circle"></i>
-                <span class="nav-link-text" data-i18n="nav.application_intel">Manage Users</span>
-            </a>
-        </li>
+                <li class="{{ Route::is('users.index') ? 'active' : '' }}">
+                    <a href="{{ route('users.index') }}" title="Application Intel" data-filter-tags="application intel">
+                        <i class="fas fa-user-circle"></i>
+                        <span class="nav-link-text" data-i18n="nav.application_intel">Manage Users</span>
+                    </a>
+                </li>
+            @endif
+           @if(\Illuminate\Support\Facades\Auth::user()->isWorker())
+               <li class="nav-title">Search</li>
+               <li class="{{ Route::is('jobs.index') ? 'active' : '' }}">
+                   <a href="{{ route('jobs.index') }}" title="Application Intel" data-filter-tags="application intel">
+                       <i class="fas fa-search"></i>
+                       <span class="nav-link-text" data-i18n="nav.application_intel">Find Job</span>
+                   </a>
+               </li>
+           @endif
+            @if(\Illuminate\Support\Facades\Auth::user()->isEmployer())
+                   <li class="nav-title">Need Jobber</li>
+               <li class="{{ Route::is('jobs.create') ? 'active' : '' }}">
+                   <a href="{{ route('jobs.create') }}" title="Application Intel" data-filter-tags="application intel">
+                       <i class="fas fa-plus"></i>
+                       <span class="nav-link-text" data-i18n="nav.application_intel">Post new Job</span>
+                   </a>
+               </li>
+           @endif
+                   <li class="nav-title">My works</li>
+               <li class="{{ Route::is('users.index') ? 'active' : '' }}">
+                   <a href="{{ route('users.index') }}" title="Application Intel" data-filter-tags="application intel">
+                       <i class="fas fa-list"></i>
+                       <span class="nav-link-text" data-i18n="nav.application_intel">
+                           Current {{ \Illuminate\Support\Facades\Auth::user()->isEmployer() ? 'Jobs' : 'Works' }}</span>
+                   </a>
+               </li>
+               @if(\Illuminate\Support\Facades\Auth::user()->isWorker())
+                   <li class="{{ Route::is('users.index') ? 'active' : '' }}">
+                       <a href="{{ route('users.index') }}" title="Application Intel" data-filter-tags="application intel">
+                           <i class="fas fa-thumbs-up"></i>
+                           <span class="nav-link-text" data-i18n="nav.application_intel">My Offers</span>
+                       </a>
+                   </li>
+               @endif
+               <li class="{{ Route::is('users.index') ? 'active' : '' }}">
+                   <a href="{{ route('users.index') }}" title="Application Intel" data-filter-tags="application intel">
+                       <i class="fas fa-thumbs-up"></i>
+                       <span class="nav-link-text" data-i18n="nav.application_intel">My skills</span>
+                   </a>
+               </li>
+               <li class="nav-title">Operations histories</li>
+               <li class="{{ Route::is('users.index') ? 'active' : '' }}">
+                   <a href="{{ route('users.index') }}" title="Application Intel" data-filter-tags="application intel">
+                       <i class="fas fa-history"></i>
+                       <span class="nav-link-text" data-i18n="nav.application_intel">Jobs histories</span>
+                   </a>
+               </li>
+               <li class="{{ Route::is('users.index') ? 'active' : '' }}">
+                   <a href="{{ route('users.index') }}" title="Application Intel" data-filter-tags="application intel">
+                       <i class="fas fa-credit-card"></i>
+                       <span class="nav-link-text" data-i18n="nav.application_intel">Payments histories</span>
+                   </a>
+               </li>
+        @endauth
     </ul>
     <div class="filter-message js-filter-message bg-success-600"></div>
 </nav>
 <!-- END PRIMARY NAVIGATION -->
-<!-- NAV FOOTER -->
-<div class="nav-footer shadow-top">
-    <a href="#" onclick="return false;" data-action="toggle" data-class="nav-function-minify" class="hidden-md-down">
-        <i class="ni ni-chevron-right"></i>
-        <i class="ni ni-chevron-right"></i>
-    </a>
-    <ul class="list-table m-auto nav-footer-buttons">
-        <li>
-            <a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="Chat logs">
-                <i class="fal fa-comments"></i>
-            </a>
-        </li>
-        <li>
-            <a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="Support Chat">
-                <i class="fal fa-life-ring"></i>
-            </a>
-        </li>
-        <li>
-            <a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="Make a call">
-                <i class="fal fa-phone"></i>
-            </a>
-        </li>
-    </ul>
-</div> <!-- END NAV FOOTER -->
+
 <!-- BEGIN Shortcuts -->
 <div class="modal fade modal-backdrop-transparent" id="modal-shortcut" tabindex="-1" role="dialog" aria-labelledby="modal-shortcut" aria-hidden="true">
     <div class="modal-dialog modal-dialog-top modal-transparent" role="document">

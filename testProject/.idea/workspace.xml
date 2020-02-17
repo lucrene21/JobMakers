@@ -3,9 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="2a98bc20-0383-4bb3-a24a-5440e55a28b8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/JobController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/JobController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/jobs/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/jobs/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PaymentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PaymentController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Job.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Job.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Message.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Message.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/jobs/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/jobs/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/menu.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/payments/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/payments/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/users/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -210,7 +217,10 @@
       <workItem from="1580466858139" duration="19005000" />
       <workItem from="1580724618461" duration="2728000" />
       <workItem from="1580817755484" duration="56199000" />
-      <workItem from="1581173250370" duration="53453000" />
+      <workItem from="1581173250370" duration="64884000" />
+      <workItem from="1581685469102" duration="429000" />
+      <workItem from="1581744880429" duration="5413000" />
+      <workItem from="1581863524898" duration="9556000" />
     </task>
     <servers />
   </component>
@@ -230,26 +240,26 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="534" y="244" key="NewPhpClassDialog/0.0.1600.860@0.0.1600.860" timestamp="1581518471656" />
-    <state x="634" y="353" key="NewPhpFileDialog" timestamp="1581594732974">
+    <state x="634" y="353" key="NewPhpFileDialog" timestamp="1581944995342">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="634" y="353" key="NewPhpFileDialog/0.0.1600.860@0.0.1600.860" timestamp="1581594732974" />
-    <state x="496" y="253" key="com.intellij.ide.util.TipDialog" timestamp="1581199154092">
+    <state x="634" y="353" key="NewPhpFileDialog/0.0.1600.860@0.0.1600.860" timestamp="1581944995342" />
+    <state x="496" y="253" key="com.intellij.ide.util.TipDialog" timestamp="1581863625663">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="496" y="253" key="com.intellij.ide.util.TipDialog/0.0.1600.860@0.0.1600.860" timestamp="1581199154092" />
-    <state x="496" y="167" width="607" height="526" key="find.popup" timestamp="1581350334969">
+    <state x="496" y="253" key="com.intellij.ide.util.TipDialog/0.0.1600.860@0.0.1600.860" timestamp="1581863625663" />
+    <state x="496" y="167" width="607" height="526" key="find.popup" timestamp="1581943311948">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="496" y="167" width="607" height="526" key="find.popup/0.0.1600.860@0.0.1600.860" timestamp="1581350334969" />
+    <state x="496" y="167" width="607" height="526" key="find.popup/0.0.1600.860@0.0.1600.860" timestamp="1581943311948" />
     <state x="456" y="195" key="run.anything.popup" timestamp="1580822062240">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="456" y="195" key="run.anything.popup/0.0.1600.860@0.0.1600.860" timestamp="1580822062240" />
-    <state x="463" y="180" width="672" height="678" key="search.everywhere.popup" timestamp="1581351674186">
+    <state x="463" y="180" width="672" height="678" key="search.everywhere.popup" timestamp="1581945587251">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="463" y="180" width="672" height="678" key="search.everywhere.popup/0.0.1600.860@0.0.1600.860" timestamp="1581351674186" />
+    <state x="463" y="180" width="672" height="678" key="search.everywhere.popup/0.0.1600.860@0.0.1600.860" timestamp="1581945587251" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -276,12 +286,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/resources/views/users/show.blade.php</url>
-          <line>280</line>
+          <line>256</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/resources/views/jobs/show.blade.php</url>
-          <line>2</line>
+          <line>5</line>
           <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
@@ -301,18 +311,28 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/resources/views/users/show.blade.php</url>
-          <line>172</line>
+          <line>148</line>
           <option name="timeStamp" value="14" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/resources/views/users/show.blade.php</url>
-          <line>174</line>
+          <line>150</line>
           <option name="timeStamp" value="15" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/resources/views/users/show.blade.php</url>
-          <line>171</line>
+          <line>147</line>
           <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/views/layouts/app.blade.php</url>
+          <line>29</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/views/layouts/header.blade.php</url>
+          <line>82</line>
+          <option name="timeStamp" value="19" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
