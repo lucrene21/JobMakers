@@ -12,7 +12,7 @@
                     <div class="row">
                         <div class="col-xl-12">
                             <h2 class="fs-xxl fw-500 mt-4 text-white text-center">
-                               Update Your Info
+                               Update User Informations
                                 <small class="h3 fw-300 mt-3 mb-5 text-white opacity-60 hidden-sm-down">
                                     Enjoy JobMaker on your desktop.
                                 </small>
@@ -65,8 +65,7 @@
 
                                     <div class="form-group">
                                         <label class="form-label" for="role">Account type</label>
-                                        <select id="role" class="form-control @error('role_id') is-invalid @enderror" name="role_id" value="{{ old('role_id') }}" required>
-                                            <option value="{{ $user->role_id }}">Choose the account type</option>
+                                        <select id="role" class="form-control @error('role_id') is-invalid @enderror" name="role_id" value="{{ $user->role_id }}" required>
                                             @foreach($roles as $role)
                                                 <option value="{{ $role->id }}">{{ $role->label }}</option>
                                             @endforeach

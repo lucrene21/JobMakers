@@ -65,24 +65,27 @@
                                                 <td>{{ $user->phone }}</td>
                                                 <td>{{ $user->created_at->format('d-m-Y  H:m:s') }}</td>
                                                 <td>
-                                                    <a title="show users profile" href="{{ route('users.show', $user->id) }}" class="btn btn-info btn-icon rounded-circle waves-effect waves-themed">
-                                                        <i class="fal fa-eye"></i>
-                                                    </a>
-                                                    <a title="update user" href="{{ route('users.edit', $user->id) }}" class="btn btn-warning btn-icon rounded-circle waves-effect waves-themed">
-                                                        <i class="fal fa-edit"></i>
-                                                    </a>
-                                                    <a title="delete user" class="btn btn-danger btn-icon rounded-circle waves-effect waves-themed">
-                                                        <form action="{{ route('users.destroy', $user->id) }}" method="POST">
-                                                            @csrf
-                                                            @method('delete')
-                                                            <button type="submit" class="btn btn-danger">
-                                                                <i class="fal fa-trash"></i>
-                                                            </button>
-                                                        </form>
-                                                    </a>
-{{--                                                    <a title="delete user" href="{{ route( 'delete', $user->id ) }}" class="btn btn-danger btn-icon rounded-circle waves-effect waves-themed">--}}
-{{--                                                        <i class="fal fa-trash"></i>--}}
-{{--                                                    </a>--}}
+                                                    <div class="row justify-content-center">
+                                                        <div class="col-auto">
+                                                            <a title="show users profile" href="{{ route('users.show', $user->id) }}" class="btn btn-info btn-icon rounded-circle waves-effect waves-themed">
+                                                                <i class="fal fa-eye"></i>
+                                                            </a>
+                                                        </div>
+                                                        <div class="col-auto">
+                                                            <a title="update user" href="{{ route('users.edit', $user->id) }}" class="btn btn-warning btn-icon rounded-circle waves-effect waves-themed">
+                                                                <i class="fal fa-edit"></i>
+                                                            </a>
+                                                        </div>
+                                                        <div class="col-auto">
+                                                            <form action="{{ route('users.destroy', $user->id) }}" method="POST">
+                                                                @csrf
+                                                                @method('delete')
+                                                                <button type="submit" class="btn btn-danger btn-icon rounded-circle waves-effect waves-themed">
+                                                                    <i class="fal fa-trash"></i>
+                                                                </button>
+                                                            </form>
+                                                        </div>
+                                                    </div>
                                                 </td>
                                             </tr>
                                         @endforeach
@@ -100,11 +103,4 @@
 
 @section('script')
     <script src="{{asset('theme')}}/js/datagrid/datatables/datatables.bundle.js"></script>
-
-    <script>
-        $(document).ready(function() {
-
-        });
-        });
-    </script>
 @endsection

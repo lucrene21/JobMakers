@@ -33,3 +33,4 @@
         Route::resource('/jobs', 'JobController')->middleware('auth');
         Route::resource('/offers', 'OfferController')->middleware('auth');
         Route::resource('/orders', 'OrderController')->middleware('auth');
+        Route::resource('/categories', 'JobCategoryController')->except(['show'])->middleware('auth');

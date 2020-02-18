@@ -10,15 +10,17 @@ namespace App\Models;
 
 /**
  * Class Message
- *
+ * 
  * @property int $id
- * @property int $sender_id
- * @property int $receiver_id
+ * @property int $user_id
+ * @property string $title
  * @property string $content
  * @property bool $is_read
  * @property \Carbon\Carbon $created_at
- * @property string $deleted_at
  * @property \Carbon\Carbon $updated_at
+ * @property string $deleted_at
+ * 
+ * @property \App\Models\User $user
  *
  * @package App\Models
  */
@@ -28,15 +30,19 @@ class Message extends \Illuminate\Database\Eloquent\Model
 	protected $table = 'message';
 
 	protected $casts = [
-		'sender_id' => 'int',
-		'receiver_id' => 'int',
+		'user_id' => 'int',
 		'is_read' => 'bool'
 	];
 
 	protected $fillable = [
-		'sender_id',
-		'receiver_id',
+		'user_id',
+		'title',
 		'content',
 		'is_read'
 	];
+
+	public function user()
+	{
+		return $this->belongsTo(\App\Models\User::class);
+	}
 }

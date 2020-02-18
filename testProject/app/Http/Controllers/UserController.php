@@ -58,17 +58,15 @@ class UserController extends Controller
             'last_name' => 'required|string|max:255',
             'email' => 'required|string|email|unique:user',
             'phone' => 'required|string|max:16|unique:user',
-            'password' => 'required|string|min:8|confirmed',
+            'password' => 'required|string|min:4|confirmed',
         ]);
         $request->merge([
             'role_id' => Role::where('code', 'ADM')->first()->id,
-            'password' => Hash::make(Input::get('password'))
+            'password' => Hash::make($request->input('password'))
         ]);
         $user = User::create($request->all());
         if ($user){
-
             return redirect()->to(route('users.index'))->with(['message' => 'Nouveau utilisateur enregistre avec success']);
-            Flashy::message('Welcome Aboard!');
         }
         else
             return redirect()->back()->with(['error' => 'Erreur lors de l\'enregistrement de l\'utilisateur']);
