@@ -139,7 +139,7 @@ class User extends Authenticatable
 	}
 
 	public function messages() {
-	    return $this->hasMany(\App\Models\Message::class, 'receiver_id');
+	    return $this->hasMany(\App\Models\Message::class, 'user_id');
     }
 
 	public function isAdmin() {

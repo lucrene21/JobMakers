@@ -10,21 +10,21 @@ namespace App\Models;
 
 /**
  * Class Job
- *
+ * 
  * @property int $id
  * @property int $localisation_id
  * @property int $category_id
  * @property int $user_id
- * @property \Carbon\Carbon $created_at
- * @property \Carbon\Carbon $updated_at
- * @property string $deleted_at
  * @property string $label
  * @property string $description
  * @property string $type
  * @property float $price_min
  * @property float $price_max
  * @property int $delivery_time
- *
+ * @property \Carbon\Carbon $created_at
+ * @property \Carbon\Carbon $updated_at
+ * @property string $deleted_at
+ * 
  * @property \App\Models\Category $category
  * @property \App\Models\Localisation $localisation
  * @property \App\Models\User $user
@@ -46,7 +46,7 @@ class Job extends \Illuminate\Database\Eloquent\Model
 		'localisation_id' => 'int',
 		'category_id' => 'int',
 		'user_id' => 'int',
-		' ' => 'float',
+		'price_min' => 'float',
 		'price_max' => 'float',
 		'delivery_time' => 'int'
 	];
@@ -80,7 +80,7 @@ class Job extends \Illuminate\Database\Eloquent\Model
 
 	public function skills()
 	{
-		return $this->belongsToMany(\App\Models\Skill::class)
+		return $this->belongsToMany(\App\Models\Skill::class, 'job_skill', 'job_id')
 					->withPivot('id', 'deleted_at')
 					->withTimestamps();
 	}

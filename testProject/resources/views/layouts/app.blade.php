@@ -40,5 +40,18 @@
 <script src="{{asset('theme')}}/js/vendors.bundle.js"></script>
 <script src="{{asset('theme')}}/js/app.bundle.js"></script>
 @yield('script')
+
+@if(session()->has('success'))
+    <script>
+        const str = "{{ session('message') }}";
+        notify(str, 'inverse');
+    </script>
+@endif
+@if(session()->has('error'))
+    <script>
+        const str = "{{ session('error') }}";
+        notify(str, 'danger');
+    </script>
+@endif
 </body>
 </html>
