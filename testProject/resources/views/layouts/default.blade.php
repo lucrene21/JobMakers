@@ -12,7 +12,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no, minimal-ui">
     <!-- Call App Mode on ios devices -->
-    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
     <!-- Remove Tap Highlight on Windows Phone IE -->
     <meta name="msapplication-tap-highlight" content="no">
     <!-- base css -->
@@ -33,7 +33,7 @@
     <div class="page-inner">
         <!-- BEGIN Left Aside -->
         <aside class="page-sidebar">
-           @include('layouts.menu')
+            @include('layouts.menu')
         </aside>
         <!-- END Left Aside -->
         <div class="page-content-wrapper">
@@ -47,17 +47,18 @@
             <!-- BEGIN Page Content -->
             <!-- the #js-page-content id is needed for some plugins to initialize -->
             <main id="js-page-content" role="main" class="page-content">
-               @yield('contenu')
+                @yield('contenu')
             </main>
             <!-- this overlay is activated only when mobile menu is triggered -->
-            <div class="page-content-overlay" data-action="toggle" data-class="mobile-nav-on"></div> <!-- END Page Content -->
+            <div class="page-content-overlay" data-action="toggle" data-class="mobile-nav-on"></div>
+            <!-- END Page Content -->
             <!-- BEGIN Page Footer -->
             <footer class="page-footer" role="contentinfo">
-               @include('layouts.footer')
+                @include('layouts.footer')
             </footer>
             <!-- END Page Footer -->
-            @include('layouts.shortcut')
-            <!-- BEGIN Color profile -->
+        @include('layouts.shortcut')
+        <!-- BEGIN Color profile -->
             <!-- this area is hidden and will not be seen on screens or screen readers -->
             <!-- we use this only for CSS color refernce for JS stuff -->
             <p id="js-color-profile" class="d-none">
@@ -132,5 +133,6 @@
 <script src="{{ asset('js/app.js') }}"></script>
 <script src="{{asset('theme')}}/js/vendors.bundle.js"></script>
 <script src="{{asset('theme')}}/js/app.bundle.js"></script>
+<script src="{{asset('js')}}/jquery/js/jquery.min.js"></script>
 </body>
 </html>
