@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a98bc20-0383-4bb3-a24a-5440e55a28b8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -220,8 +221,12 @@
       <workItem from="1581863524898" duration="10817000" />
 =======
       <workItem from="1581863524898" duration="9590000" />
+<<<<<<< HEAD
       <workItem from="1581983898874" duration="12387000" />
 >>>>>>> bc7cb1bcb6ef663fc654238569ad654f7a7f65e8
+=======
+      <workItem from="1581983898874" duration="14135000" />
+>>>>>>> bf29eae5e52e9c083ff5fe803267ce9d23a5c251
     </task>
     <servers />
   </component>
@@ -242,28 +247,29 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="534" y="244" key="NewPhpClassDialog/0.0.1600.860@0.0.1600.860" timestamp="1581518471656" />
-    <state x="761" y="448" width="401" height="148" key="NewPhpFileDialog" timestamp="1582016765804">
+    <state x="761" y="448" width="401" height="149" key="NewPhpFileDialog" timestamp="1582038619271">
       <screen x="0" y="27" width="1920" height="1025" />
     </state>
     <state x="634" y="353" key="NewPhpFileDialog/0.0.1600.860@0.0.1600.860" timestamp="1581944995342" />
-    <state x="761" y="448" width="401" height="148" key="NewPhpFileDialog/0.27.1920.1025@0.27.1920.1025" timestamp="1582016765804" />
+    <state x="761" y="448" width="401" height="149" key="NewPhpFileDialog/0.27.1920.1025@0.27.1920.1025" timestamp="1582038619271" />
     <state x="496" y="253" key="com.intellij.ide.util.TipDialog" timestamp="1581863625663">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="496" y="253" key="com.intellij.ide.util.TipDialog/0.0.1600.860@0.0.1600.860" timestamp="1581863625663" />
-    <state x="496" y="167" width="607" height="526" key="find.popup" timestamp="1581943311948">
-      <screen x="0" y="0" width="1600" height="860" />
+    <state x="595" y="226" width="729" height="627" key="find.popup" timestamp="1582037731174">
+      <screen x="0" y="27" width="1920" height="1025" />
     </state>
     <state x="496" y="167" width="607" height="526" key="find.popup/0.0.1600.860@0.0.1600.860" timestamp="1581943311948" />
+    <state x="595" y="226" width="729" height="627" key="find.popup/0.27.1920.1025@0.27.1920.1025" timestamp="1582037731174" />
     <state x="456" y="195" key="run.anything.popup" timestamp="1580822062240">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="456" y="195" key="run.anything.popup/0.0.1600.860@0.0.1600.860" timestamp="1580822062240" />
-    <state x="556" y="242" width="807" height="809" key="search.everywhere.popup" timestamp="1582034565640">
+    <state x="556" y="242" width="807" height="809" key="search.everywhere.popup" timestamp="1582038585855">
       <screen x="0" y="27" width="1920" height="1025" />
     </state>
     <state x="463" y="180" width="672" height="678" key="search.everywhere.popup/0.0.1600.860@0.0.1600.860" timestamp="1581945587251" />
-    <state x="556" y="242" width="807" height="809" key="search.everywhere.popup/0.27.1920.1025@0.27.1920.1025" timestamp="1582034565640" />
+    <state x="556" y="242" width="807" height="809" key="search.everywhere.popup/0.27.1920.1025@0.27.1920.1025" timestamp="1582038585855" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -280,12 +286,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/resources/views/auth/login.blade.php</url>
-          <line>113</line>
+          <line>123</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/resources/views/auth/login.blade.php</url>
-          <line>5</line>
+          <line>4</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
