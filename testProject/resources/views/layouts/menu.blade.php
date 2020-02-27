@@ -51,11 +51,13 @@
                         <span class="nav-link-text" data-i18n="nav.application_intel">Manage Payments</span>
                     </a>
                 </li>
-
-                <li class="{{ Route::is('jobs.*') || Route::is('offers.*') || Route::is('orders.*') ? 'active' : '' }}">
-                    <a href="#" title="Application Intel" data-filter-tags="application intel">
+                <li class="active open">
+                    <a href="#" aria-expanded="true"
+                       class="waves-effect waves-themed"
+                       title="Application Intel" data-filter-tags="application intel">
                         <i class="fas fa-forklift"></i>
                         <span class="nav-link-text" data-i18n="nav.application_intel">Manage Job</span>
+                        <b class="collapse-sign"><em class="fal fa-angle-down"></em></b>
                     </a>
                     <ul>
                         <li class="{{ Route::is('jobs.*') ? 'active' : '' }}">
@@ -90,7 +92,8 @@
                     </a>
                 </li>
                 <li class="{{ Route::is('categories.index') ? 'active' : '' }}">
-                    <a href="{{ route('categories.index') }}" title="Application Intel" data-filter-tags="application intel">
+                    <a href="{{ route('categories.index') }}" title="Application Intel"
+                       data-filter-tags="application intel">
                         <i class="fas fa-edit"></i>
                         <span class="nav-link-text" data-i18n="nav.application_intel">Manage Job Categories</span>
                     </a>

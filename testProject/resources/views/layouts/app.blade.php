@@ -14,7 +14,7 @@
     <!-- Call App Mode on ios devices -->
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <!-- Remove Tap Highlight on Windows Phone IE -->
-    <meta name="msapplication-tap-highli content="no">
+    <meta name="msapplication-tap-highli" content="no">
     <!-- base css -->
     <link rel="stylesheet" media="screen, print" href="{{asset('theme')}}/css/vendors.bundle.css">
     <link rel="stylesheet" media="screen, print" href="{{asset('theme')}}/css/app.bundle.css">
