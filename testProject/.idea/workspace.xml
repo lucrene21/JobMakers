@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2a98bc20-0383-4bb3-a24a-5440e55a28b8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/js/statistics/peity/peity.bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/theme/js/statistics/peity/peity.bundle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/default.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/default.blade.php" afterDir="false" />
-    </list>
+    <list default="true" id="2a98bc20-0383-4bb3-a24a-5440e55a28b8" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -221,7 +215,7 @@
       <workItem from="1581744880429" duration="5413000" />
       <workItem from="1581863524898" duration="9590000" />
       <workItem from="1581983898874" duration="14135000" />
-      <workItem from="1582042517568" duration="2555000" />
+      <workItem from="1582042517568" duration="2691000" />
     </task>
     <servers />
   </component>
